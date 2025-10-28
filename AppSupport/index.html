@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Support - Maksim Bulat</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+   <script>
+       (function(){
+           emailjs.init("nyBg3sqiD6iwo7VV1");
+       })();
+   </script>
+</head>
+<body>
+    <!-- Decorative blobs -->
+    <div class="decorative-blobs">
+        <svg class="blob blob-1" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="gradient-1" x1="0" x2="1">
+                    <stop offset="0%" stop-color="#0ea5e9" />
+                    <stop offset="100%" stop-color="#8b5cf6" />
+                </linearGradient>
+            </defs>
+            <g opacity="0.6">
+                <path d="M300 50C360 50 460 90 520 150C580 210 590 320 520 380C450 440 360 480 300 520C240 480 150 440 80 380C10 320 20 210 80 150C140 90 240 50 300 50Z" fill="url(#gradient-1)" />
+            </g>
+        </svg>
+
+        <svg class="blob blob-2" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="gradient-2" x1="0" x2="1">
+                    <stop offset="0%" stop-color="#06b6d4" />
+                    <stop offset="100%" stop-color="#7c3aed" />
+                </linearGradient>
+            </defs>
+            <path d="M300 30C360 30 470 80 530 160C590 240 560 350 500 410C440 470 340 510 280 540C220 510 120 470 60 410C0 350 30 240 90 160C150 80 240 30 300 30Z" fill="url(#gradient-2)" />
+        </svg>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="back-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    <span>Back to Home</span>
+                </a>
+
+                <div class="header-info">
+                    <div class="name">App Support</div>
+                    <div class="title">Get help with my apps</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="main">
+        <div class="container">
+            <!-- Support Hero -->
+            <section class="support-hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        How can I help you?
+                        <span class="gradient-text">App Support</span>
+                    </h1>
+                    <p class="hero-description">
+                        I'm here to help! Whether you have questions, encountered an issue, or want to share feedback about one of my apps, I'd love to hear from you. Your input helps me improve and deliver better experiences.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Quick Help Section -->
+            <section class="quick-help">
+                <h2 class="section-title">Quick Help</h2>
+                <div class="help-grid">
+                    <div class="help-card">
+                        <div class="help-icon">📱</div>
+                        <h3 class="help-title">App Issues</h3>
+                        <p class="help-description">Experiencing crashes, bugs, or unexpected behavior? Let me know the details.</p>
+                    </div>
+
+                    <div class="help-card">
+                        <div class="help-icon">💡</div>
+                        <h3 class="help-title">Feature Requests</h3>
+                        <p class="help-description">Have an idea for a new feature or improvement? I'd love to hear your suggestions.</p>
+                    </div>
+
+                    <div class="help-card">
+                        <div class="help-icon">🔒</div>
+                        <h3 class="help-title">Privacy & Security</h3>
+                        <p class="help-description">Questions about how your data is handled? Your privacy is my priority.</p>
+                    </div>
+
+                    <div class="help-card">
+                        <div class="help-icon">⭐</div>
+                        <h3 class="help-title">General Feedback</h3>
+                        <p class="help-description">Love something? Found something that could be better? Share your thoughts.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Support Form Section -->
+            <section class="support-form-section">
+                <div class="form-container">
+                    <h2 class="section-title">Contact Support</h2>
+                    <p class="form-intro">Fill out the form below and I'll get back to you as soon as possible, typically within 24-48 hours.</p>
+
+                    <!-- Success Message (hidden by default) -->
+                    <div id="successMessage" class="success-message" style="display: none;">
+                        <div class="success-icon">✓</div>
+                        <h3>Message Sent!</h3>
+                        <p>Thank you for reaching out. I've received your message and will respond within 24-48 hours.</p>
+                    </div>
+
+                    <!-- Error Message (hidden by default) -->
+                    <div id="errorMessage" class="error-message" style="display: none;">
+                        <div class="error-icon">⚠</div>
+                        <h3>Something went wrong</h3>
+                        <p id="errorText">Please try again or email me directly at maksim.bulat.help@gmail.com</p>
+                    </div>
+
+                    <form id="supportForm" class="support-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Your Name *</label>
+                                <input type="text" name="name" class="form-input" placeholder="John Smith" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Email Address *</label>
+                                <input type="email" name="email" class="form-input" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Which App? *</label>
+                            <select name="app" class="form-select" required>
+                                <option value="">Select an app...</option>
+                                <option value="Sleepy">Sleeppy • Baby Sleep Agent</option>
+                                <option value="Other">Other / General Question</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Subject *</label>
+                            <input type="text" name="subject" class="form-input" placeholder="Brief description of your issue or question" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Message *</label>
+                            <textarea name="message" class="form-textarea" placeholder="Please provide as much detail as possible. For bugs, include:\n- What you were trying to do\n- What happened instead\n- iOS version\n- Device model (iPhone 14, iPad Pro, etc.)" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Device Information (Optional)</label>
+                            <input type="text" name="device" class="form-input" placeholder="e.g., iPhone 14 Pro, iOS 17.2">
+                        </div>
+
+                        <button type="submit" class="btn-submit" id="submitBtn">
+                            <span id="btnText">Send Message</span>
+                            <span id="btnLoader" class="loader" style="display: none;"></span>
+                        </button>
+
+                        <p class="form-footer">
+                            By submitting this form, you agree to be contacted regarding your inquiry.
+                            Your information is handled according to my <a href="#privacy" class="privacy-link">privacy policy</a>.
+                        </p>
+                    </form>
+
+                    <div class="alternative-contact">
+                        <p>Prefer email? Reach me directly at <a href="mailto:maksim.bulat.help@gmail.com">maksim.bulat.help@gmail.com</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3 class="faq-question">How quickly will I get a response?</h3>
+                        <p class="faq-answer">I typically respond within 24-48 hours. For urgent issues, please mention it in your message.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">What information should I include for bug reports?</h3>
+                        <p class="faq-answer">Please include your device model, iOS version, and detailed steps to reproduce the issue. Screenshots or screen recordings are also very helpful!</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">Can I request a refund?</h3>
+                        <p class="faq-answer">All refunds are processed through Apple's App Store. You can request a refund directly from Apple at reportaproblem.apple.com.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">Do you collect my personal data?</h3>
+                        <p class="faq-answer">I only use the information you provide to respond to your inquiry. I don't share your data with third parties. Check each app's privacy policy for details.</p>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                © <span id="year"></span> Maksim Bulat — iOS developer
+            </footer>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

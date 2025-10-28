@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maksim Bulat - iOS Developer</title>
+    <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+   <script>
+       (function(){
+           emailjs.init("nyBg3sqiD6iwo7VV1");
+       })();
+   </script>
+</head>
+<body>
+    <!-- Decorative blobs -->
+    <div class="decorative-blobs">
+        <svg class="blob blob-1" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="gradient-1" x1="0" x2="1">
+                    <stop offset="0%" stop-color="#0ea5e9" />
+                    <stop offset="100%" stop-color="#8b5cf6" />
+                </linearGradient>
+            </defs>
+            <g opacity="0.6">
+                <path d="M300 50C360 50 460 90 520 150C580 210 590 320 520 380C450 440 360 480 300 520C240 480 150 440 80 380C10 320 20 210 80 150C140 90 240 50 300 50Z" fill="url(#gradient-1)" />
+            </g>
+        </svg>
+
+        <svg class="blob blob-2" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="gradient-2" x1="0" x2="1">
+                    <stop offset="0%" stop-color="#06b6d4" />
+                    <stop offset="100%" stop-color="#7c3aed" />
+                </linearGradient>
+            </defs>
+            <path d="M300 30C360 30 470 80 530 160C590 240 560 350 500 410C440 470 340 510 280 540C220 510 120 470 60 410C0 350 30 240 90 160C150 80 240 30 300 30Z" fill="url(#gradient-2)" />
+        </svg>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <div class="logo-box">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" class="logo-icon">
+                            <path d="M3 12a9 9 0 1018 0 9 9 0 10-18 0z" stroke="url(#logo-gradient)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                            <defs>
+                                <linearGradient id="logo-gradient" x1="0" x2="1">
+                                    <stop offset="0%" stop-color="#60a5fa" />
+                                    <stop offset="100%" stop-color="#a78bfa" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="header-info">
+                        <div class="name">Maksim Bulat</div>
+                        <div class="title">iOS Developer • App Architect</div>
+                    </div>
+                </div>
+
+                <nav class="nav">
+                    <a href="#projects" class="nav-link">Apps</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="main">
+        <div class="container">
+            <!-- Hero section -->
+            <section class="hero">
+                <div class="hero-text fade-in-left">
+                    <p class="greeting">Hello — I'm</p>
+                    <h1 class="hero-title">
+                        Maksim Bulat
+                        <span class="gradient-text">iOS Developer</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        I'm the developer behind the apps you use. With over 7 years of experience, I focus on building elegant, reliable iOS applications with exceptional performance and delightful user experiences. Quality and user satisfaction are at the heart of everything I create.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn-primary">
+                            <span>📱</span> View My Apps
+                        </a>
+                        <a href="#about" class="btn-secondary">
+                            Learn more
+                        </a>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat">
+                            <div class="stat-label">Experience</div>
+                            <div class="stat-value">7+ years</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-label">Platforms</div>
+                            <div class="stat-value">iOS, iPadOS</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-label">Languages</div>
+                            <div class="stat-value">Swift, Objective-C</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-label">Apps Published</div>
+                            <div class="stat-value">Multiple</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-card fade-in-scale">
+                    <div class="glass-card profile-card">
+                        <div class="profile-header">
+                            <div class="profile-avatar">MB</div>
+                            <div class="profile-info">
+                                <div class="profile-name">Maksim Bulat</div>
+                                <div class="profile-title">Senior iOS Developer • Swift & SwiftUI</div>
+                            </div>
+                        </div>
+
+                        <div class="profile-description">
+                            <p>Specialized in modern Apple frameworks (SwiftUI, SwiftData, Combine) and building maintainable codebases with clean architecture patterns.</p>
+                        </div>
+
+                        <div class="profile-links">
+                            <a href="#" class="profile-link">GitHub</a>
+                            <a href="#" class="profile-link">App Store</a>
+                            <a href="AppSupport/index.html" class="profile-link">Support</a>
+                        </div>
+                    </div>
+
+                    <div class="featured-badge">
+                        <div class="badge-label">Featured</div>
+                        <div class="badge-text">Top App Store charts</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects section -->
+            <section id="projects" class="projects-section">
+                <h2 class="section-title">My Apps</h2>
+                <p class="section-description">Apps I've developed and published on the App Store. Each one is built with attention to detail, performance optimization, and user experience.</p>
+
+                <div class="projects-grid">
+                    <div class="project-card fade-in-up" style="animation-delay: 0s">
+                        <div class="project-header">
+                            <div class="project-info">
+                                <div class="project-title">Sleeppy • Baby Sleep Agent</div>
+                                <div class="project-tagline">Calming sounds, growth analytics and insights</div>
+                            </div>
+                            <div class="project-icon">S</div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">SwiftUI</span>
+                            <span class="tech-tag">Combine</span>
+                            <span class="tech-tag">AVFoundation</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills section -->
+            <section id="skills" class="skills-section">
+                <h3 class="section-title">Core expertise</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">Swift & SwiftUI</div>
+                    <div class="skill-card">Architecture (MVVM, Clean)</div>
+                    <div class="skill-card">Combine / Async</div>
+                    <div class="skill-card">SwiftData / CoreData</div>
+                    <div class="skill-card">UI/UX & Prototyping</div>
+                    <div class="skill-card">Performance & Profiling</div>
+                    <div class="skill-card">App Store Deployment</div>
+                    <div class="skill-card">Unit & UI Testing</div>
+                </div>
+            </section>
+
+            <!-- About section -->
+            <section id="about" class="about-section">
+                <div class="about-main">
+                    <h4 class="about-title">About me</h4>
+                    <p class="about-text">
+                        I'm an iOS developer with over 7 years of experience building consumer and enterprise mobile apps. I enjoy working on complex problems — from audio playback and low-latency interactions to syncing large datasets and designing resilient offline-first flows. I advocate for clear APIs, automated tests and pragmatic architecture. When you download one of my apps, you can trust that it's built with quality, security, and your privacy in mind.
+                    </p>
+
+                    <div class="about-details">
+                        <div class="detail">
+                            <div class="detail-label">Role</div>
+                            <div class="detail-value">Senior iOS Developer</div>
+                        </div>
+                        <div class="detail">
+                            <div class="detail-label">Experience</div>
+                            <div class="detail-value">7+ years</div>
+                        </div>
+                        <div class="detail">
+                            <div class="detail-label">Location</div>
+                            <div class="detail-value">Warsaw, Poland</div>
+                        </div>
+                        <div class="detail">
+                            <div class="detail-label">Focus</div>
+                            <div class="detail-value">Quality & UX</div>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="contact-sidebar">
+                    <h5 class="sidebar-title">Get in Touch</h5>
+                    <div class="contact-item">Email: <a href="mailto:maksim.bulat.opportunities@gmail.com" class="contact-link">maksim.bulat.opportunities@gmail.com</a></div>
+                    <div class="contact-item">LinkedIn: <a href="https://pl.linkedin.com/in/maksim-bulat-15795a161" class="contact-link">/in/maksim-bulat-15795a161</a></div>
+
+                    <div class="sidebar-cta">
+                        <a href="AppSupport/index.html" class="btn-cta">App Support</a>
+                    </div>
+                </aside>
+            </section>
+
+            <!-- Contact section -->
+            <section id="contact" class="contact-section">
+                <div class="contact-content">
+                    <div class="contact-text">
+                        <h4 class="contact-title">Get in Touch</h4>
+                        <p class="contact-description">
+                            Have questions about one of my apps? Need support or want to provide feedback? I'd love to hear from you. Your input helps me create better experiences for all users.
+                        </p>
+
+                        <div class="contact-buttons">
+                            <a href="AppSupport/index.html" class="btn-contact">App Support Form</a>
+                            <a href="mailto:maksim.bulat.opportunities@gmail.com" class="btn-contact-secondary">Email me directly</a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label">Your name</label>
+                            <input type="text" name="name" class="form-input" placeholder="John Smith" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" name="email" class="form-input" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea name="message" class="form-textarea" placeholder="Questions, feedback, or support inquiries..." required></textarea>
+                        </div>
+
+                        <!-- Success message -->
+                        <div id="successMessage" style="display: none; padding: 1rem; background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 0.5rem; margin-bottom: 1rem;">
+                            <p style="color: #22c55e; margin: 0;">Thank you for your message! I'll get back to you soon.</p>
+                        </div>
+
+                        <!-- Error message -->
+                        <div id="errorMessage" style="display: none; padding: 1rem; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 0.5rem; margin-bottom: 1rem;">
+                            <p id="errorText" style="color: #ef4444; margin: 0;"></p>
+                        </div>
+
+                        <button type="submit" class="btn-submit" id="submitBtn">
+                            <span id="btnText">Send message</span>
+                            <span id="btnLoader" style="display: none;">Sending...</span>
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <footer class="footer">
+                © <span id="year"></span> Maksim Bulat — iOS developer
+            </footer>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
