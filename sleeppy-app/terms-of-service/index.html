@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Sleeppy Baby Sleep Agent</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-dark: #0f172a;
+            --bg-slate-900: #0f172a;
+            --bg-slate-800: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-tertiary: #64748b;
+            --sky-400: #38bdf8;
+            --sky-500: #0ea5e9;
+            --violet-400: #a78bfa;
+            --violet-500: #8b5cf6;
+            --glass-bg: rgba(255, 255, 255, 0.04);
+            --glass-border: rgba(255, 255, 255, 0.06);
+            --accent-gradient: linear-gradient(135deg, var(--sky-400) 0%, var(--violet-400) 100%);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            background: linear-gradient(135deg, var(--bg-slate-900) 0%, var(--bg-slate-800) 50%, var(--bg-dark) 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .header {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--glass-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--sky-400);
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 4rem;
+        }
+
+        /* Table of Contents */
+        .toc {
+            position: sticky;
+            top: 100px;
+            align-self: start;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+        }
+
+        .toc h2 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .toc-list {
+            list-style: none;
+        }
+
+        .toc-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .toc-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: block;
+            padding: 0.4rem 0.6rem;
+            border-radius: 0.5rem;
+            transition: all 0.2s;
+        }
+
+        .toc-link:hover {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--sky-400);
+        }
+
+        .toc-link.active {
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--sky-400);
+        }
+
+        /* Main content */
+        .content {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 1.5rem;
+            padding: 3rem;
+            max-width: 900px;
+        }
+
+        .content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .last-updated {
+            color: var(--text-tertiary);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .content h2 {
+            font-size: 1.8rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            scroll-margin-top: 100px;
+        }
+
+        .content h3 {
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 0.8rem;
+            color: var(--sky-400);
+        }
+
+        .content p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .content ul, .content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .content strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .content a {
+            color: var(--sky-400);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .content a:hover {
+            color: var(--violet-400);
+        }
+
+        .content code {
+            background: rgba(56, 189, 248, 0.1);
+            padding: 0.2rem 0.4rem;
+            border-radius: 0.25rem;
+            font-size: 0.9em;
+            color: var(--sky-400);
+        }
+
+        .notice-box {
+            background: rgba(56, 189, 248, 0.1);
+            border-left: 3px solid var(--sky-400);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+
+        .notice-box p {
+            color: var(--text-primary);
+        }
+
+        .warning-box {
+            background: rgba(251, 146, 60, 0.1);
+            border-left: 3px solid #fb923c;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+
+        .warning-box p {
+            color: var(--text-primary);
+        }
+
+        .acknowledgment-box {
+            background: rgba(139, 92, 246, 0.1);
+            border: 2px solid rgba(139, 92, 246, 0.3);
+            padding: 2rem;
+            border-radius: 1rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .acknowledgment-box p {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-tertiary);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .toc {
+                position: relative;
+                top: 0;
+                max-height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1rem;
+            }
+
+            .content {
+                padding: 2rem 1.5rem;
+            }
+
+            .content h1 {
+                font-size: 2rem;
+            }
+
+            .content h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Scrollbar styling */
+        .toc::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .toc::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .toc::-webkit-scrollbar-thumb {
+            background: var(--glass-border);
+            border-radius: 3px;
+        }
+
+        .toc::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="../../index.html" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back to Home
+            </a>
+            <div class="logo">Sleeppy Terms of Service</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="toc">
+            <h2>Contents</h2>
+            <ul class="toc-list">
+                <li><a href="#acceptance" class="toc-link">Acceptance of Terms</a></li>
+                <li><a href="#description" class="toc-link">Service Description</a></li>
+                <li><a href="#account" class="toc-link">Account & Registration</a></li>
+                <li><a href="#subscriptions" class="toc-link">Subscriptions & Payments</a></li>
+                <li><a href="#acceptable-use" class="toc-link">Acceptable Use Policy</a></li>
+                <li><a href="#intellectual-property" class="toc-link">Intellectual Property</a></li>
+                <li><a href="#user-data" class="toc-link">User Data & Privacy</a></li>
+                <li><a href="#children-privacy" class="toc-link">Children's Privacy (COPPA)</a></li>
+                <li><a href="#advertising" class="toc-link">Advertising</a></li>
+                <li><a href="#disclaimers" class="toc-link">Disclaimers & Liability</a></li>
+                <li><a href="#indemnification" class="toc-link">Indemnification</a></li>
+                <li><a href="#modifications" class="toc-link">Modifications</a></li>
+                <li><a href="#termination" class="toc-link">Termination</a></li>
+                <li><a href="#governing-law" class="toc-link">Governing Law</a></li>
+                <li><a href="#miscellaneous" class="toc-link">Miscellaneous</a></li>
+                <li><a href="#acknowledgment" class="toc-link">Acknowledgment</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <h1>Terms of Service for Sleeppy</h1>
+            <p class="last-updated"><strong>Last Updated:</strong> October 29, 2025</p>
+
+            <section id="acceptance">
+                <h2>1. Acceptance of Terms</h2>
+                <p>Welcome to Sleeppy ("we," "us," "our," or the "App"). These Terms of Service ("Terms") constitute a legally binding agreement between you (the "User," "you," or "your") and Maksim Bulat regarding your use of the Sleeppy mobile application for iOS.</p>
+
+                <div class="notice-box">
+                    <p><strong>By downloading, installing, or using Sleeppy, you agree to be bound by these Terms and our Privacy Policy.</strong> If you do not agree to these Terms, you must not access or use the App.</p>
+                </div>
+
+                <h3>Parental Consent Requirement</h3>
+                <p>Sleeppy is designed for use by parents and legal guardians to track their children's sleep patterns and development. By using this App:</p>
+                <ul>
+                    <li>You confirm that you are at least 13 years of age</li>
+                    <li>If you are entering information about a child, you confirm that you are the parent or legal guardian of that child</li>
+                    <li>You consent to the collection and processing of your child's information as described in our Privacy Policy</li>
+                    <li>You accept full responsibility for all use of the App under your account</li>
+                </ul>
+            </section>
+
+            <section id="description">
+                <h2>2. Description of Service</h2>
+                <p>Sleeppy is a baby sleep assistance application that provides:</p>
+
+                <h3>Core Features (Free):</h3>
+                <ul>
+                    <li><strong>Sound Playback:</strong> Access to 5 free soothing sounds (White Noise, Heartbeat, Rain, Shush, Midnight Lullaby)</li>
+                    <li><strong>Timer Functions:</strong> 15-minute, 30-minute, and 1-hour timer options</li>
+                    <li><strong>Manual Sleep Tracking:</strong> Record sleep sessions manually</li>
+                    <li><strong>Basic Growth Calendar:</strong> View growth spurt information based on Wonder Weeks methodology</li>
+                    <li><strong>Single Child Profile:</strong> Track one child's sleep and development</li>
+                    <li><strong>Ad-Supported Experience:</strong> Limited advertising (maximum 5 ads per day)</li>
+                </ul>
+
+                <h3>Premium Features (Subscription Required):</h3>
+                <ul>
+                    <li><strong>Premium Sound Library:</strong> Access to all 16 soothing sounds including premium lullabies and ambient sounds</li>
+                    <li><strong>Infinite Timer:</strong> All-night continuous playback without interruption</li>
+                    <li><strong>Auto-Track Sleep:</strong> Automatic sleep session recording when audio playback begins</li>
+                    <li><strong>Ad-Free Experience:</strong> Complete removal of all advertisements</li>
+                    <li><strong>Advanced Growth Insights:</strong> Detailed developmental spurt analysis and personalized recommendations</li>
+                    <li><strong>Multiple Child Profiles:</strong> Track unlimited children with separate profiles</li>
+                    <li><strong>CSV Export:</strong> Export sleep data for healthcare provider consultation</li>
+                    <li><strong>Priority Customer Support:</strong> Faster response to support inquiries</li>
+                </ul>
+
+                <h3>Additional Features:</h3>
+                <ul>
+                    <li>Lock screen playback controls via Live Activities</li>
+                    <li>Home screen widgets for quick access</li>
+                    <li>Growth spurt calendar and notifications</li>
+                    <li>Weekly sleep insights and statistics</li>
+                    <li>Dark mode and theme customization</li>
+                </ul>
+            </section>
+
+            <section id="account">
+                <h2>3. Account and Registration</h2>
+
+                <h3>No Account Required</h3>
+                <p>Sleeppy does not require user account creation, login credentials, or personal registration. All data is stored locally on your device.</p>
+
+                <h3>Device-Based Access</h3>
+                <ul>
+                    <li>Your use of the App is tied to your iOS device</li>
+                    <li>Data is not synchronized across devices or backed up to cloud services</li>
+                    <li>Uninstalling the App will permanently delete all local data</li>
+                </ul>
+            </section>
+
+            <section id="subscriptions">
+                <h2>4. Subscriptions and Payments</h2>
+
+                <h3>Subscription Plans</h3>
+                <p>We offer the following auto-renewing subscription options:</p>
+                <ul>
+                    <li><strong>Monthly Subscription:</strong> Approximately $4.99 USD per month</li>
+                    <li><strong>Yearly Subscription:</strong> Approximately $29.99 USD per year (approximately 50% savings)</li>
+                </ul>
+                <p>Pricing may vary by region and is subject to change. Prices displayed in the App Store are final and include applicable taxes.</p>
+
+                <h3>Payment Processing</h3>
+                <ul>
+                    <li>All payments are processed exclusively through Apple's App Store</li>
+                    <li>Payment will be charged to your Apple ID account at confirmation of purchase</li>
+                    <li>We do not have access to your payment card information</li>
+                    <li>All billing is managed by Apple according to their terms and conditions</li>
+                </ul>
+
+                <h3>Auto-Renewal</h3>
+                <div class="notice-box">
+                    <p><strong>Subscriptions automatically renew unless auto-renewal is turned off at least 24 hours before the end of the current period.</strong></p>
+                </div>
+                <ul>
+                    <li>Your account will be charged for renewal within 24 hours prior to the end of the current period</li>
+                    <li>The renewal charge will be the same as the original subscription price unless you are notified otherwise</li>
+                    <li>You can manage your subscription and turn off auto-renewal through your Apple ID Account Settings after purchase</li>
+                </ul>
+
+                <h3>Free Trial (If Applicable)</h3>
+                <p>If we offer a free trial:</p>
+                <ul>
+                    <li>The free trial period will be clearly stated at the time of subscription</li>
+                    <li>You may cancel anytime during the trial period without charge</li>
+                    <li>If you do not cancel before the trial ends, you will be automatically charged the subscription fee</li>
+                    <li>Any unused portion of a free trial period will be forfeited when you purchase a subscription</li>
+                </ul>
+
+                <h3>Cancellation</h3>
+                <ul>
+                    <li>You may cancel your subscription at any time through your Apple ID Account Settings</li>
+                    <li>Cancellation takes effect at the end of the current billing period</li>
+                    <li>You will retain premium access until the end of the paid period</li>
+                    <li>No refunds will be provided for partial subscription periods</li>
+                    <li>Upon cancellation, you will revert to the free version of the App</li>
+                </ul>
+
+                <h3>Refund Policy</h3>
+                <ul>
+                    <li>Refund requests must be submitted directly to Apple through the App Store</li>
+                    <li>We do not control Apple's refund decisions</li>
+                    <li>Refunds are subject to Apple's refund policy and are granted at Apple's sole discretion</li>
+                    <li>To request a refund, visit: <a href="https://support.apple.com/en-us/HT204084" target="_blank">https://support.apple.com/en-us/HT204084</a></li>
+                </ul>
+
+                <h3>Promotional Codes</h3>
+                <ul>
+                    <li>We may occasionally offer promotional codes or discounts</li>
+                    <li>Promotional offers are subject to additional terms and conditions</li>
+                    <li>Promotional codes cannot be combined with other offers unless explicitly stated</li>
+                    <li>We reserve the right to modify or cancel promotional offers at any time</li>
+                </ul>
+
+                <h3>Changes to Pricing</h3>
+                <ul>
+                    <li>We reserve the right to change subscription pricing at any time</li>
+                    <li>Price changes will not affect existing subscriptions during their current billing period</li>
+                    <li>You will be notified of price changes before they take effect</li>
+                    <li>Continued use of the subscription after a price change constitutes acceptance of the new price</li>
+                </ul>
+            </section>
+
+            <section id="acceptable-use">
+                <h2>5. Acceptable Use Policy</h2>
+
+                <h3>Permitted Uses</h3>
+                <p>You may use Sleeppy for:</p>
+                <ul>
+                    <li>Tracking your own child's (or children's) sleep patterns</li>
+                    <li>Playing soothing sounds to help your child sleep</li>
+                    <li>Monitoring developmental milestones and growth spurts</li>
+                    <li>Exporting sleep data for personal records or healthcare consultation</li>
+                    <li>Personal, non-commercial purposes only</li>
+                </ul>
+
+                <h3>Prohibited Uses</h3>
+                <p>You may NOT:</p>
+
+                <p><strong>Misuse of Service:</strong></p>
+                <ul>
+                    <li>Use the App for any commercial purpose or on behalf of any third party</li>
+                    <li>Resell, redistribute, or sublicense access to the App</li>
+                    <li>Use the App in any manner that violates applicable laws or regulations</li>
+                </ul>
+
+                <p><strong>Technical Interference:</strong></p>
+                <ul>
+                    <li>Attempt to decompile, reverse engineer, disassemble, or hack the App</li>
+                    <li>Bypass, disable, or interfere with security features or usage restrictions</li>
+                    <li>Use automated systems (bots, scrapers) to access the App</li>
+                    <li>Introduce viruses, malware, or any harmful code</li>
+                </ul>
+
+                <p><strong>Fraudulent Activity:</strong></p>
+                <ul>
+                    <li>Provide false or misleading information</li>
+                    <li>Impersonate another person or entity</li>
+                    <li>Attempt to gain unauthorized access to other users' data</li>
+                    <li>Manipulate or abuse promotional codes or free trials</li>
+                </ul>
+
+                <p><strong>Data Misuse:</strong></p>
+                <ul>
+                    <li>Collect or harvest information from the App for unauthorized purposes</li>
+                    <li>Use the App to track children without proper parental authority</li>
+                    <li>Share or distribute content from the App without authorization</li>
+                </ul>
+
+                <p><strong>Advertising Abuse (Free Users):</strong></p>
+                <ul>
+                    <li>Attempt to block, manipulate, or circumvent advertisements</li>
+                    <li>Click on ads with fraudulent intent or using automated means</li>
+                    <li>Modify the App to remove or disable advertising</li>
+                </ul>
+
+                <h3>Consequences of Violation</h3>
+                <p>Violation of these Terms may result in:</p>
+                <ul>
+                    <li>Immediate suspension or termination of your access to the App</li>
+                    <li>Cancellation of your subscription without refund</li>
+                    <li>Legal action if violations involve illegal activity</li>
+                    <li>Reporting to appropriate authorities</li>
+                </ul>
+            </section>
+
+            <section id="intellectual-property">
+                <h2>6. Intellectual Property Rights</h2>
+
+                <h3>Our Ownership</h3>
+                <p>All content, features, and functionality of Sleeppy, including but not limited to:</p>
+                <ul>
+                    <li>Software code, algorithms, and architecture</li>
+                    <li>Sound files, audio recordings, and music compositions</li>
+                    <li>User interface designs, graphics, and visual elements</li>
+                    <li>Text, images, logos, and branding</li>
+                    <li>Growth spurt data, recommendations, and developmental insights</li>
+                    <li>Trademarks, service marks, and trade names</li>
+                </ul>
+                <p>are owned by Maksim Bulat, our licensors, or content providers and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.</p>
+
+                <h3>Your License to Use</h3>
+                <p>Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to:</p>
+                <ul>
+                    <li>Download and install the App on your personal iOS device(s)</li>
+                    <li>Access and use the App's features for personal, non-commercial purposes</li>
+                    <li>Create child profiles and sleep tracking data for your own children</li>
+                </ul>
+
+                <p>This license does NOT grant you any rights to:</p>
+                <ul>
+                    <li>Modify, copy, or create derivative works of the App</li>
+                    <li>Distribute, sell, lease, or sublicense the App</li>
+                    <li>Use the App's content in other applications or services</li>
+                    <li>Remove or alter any copyright, trademark, or proprietary notices</li>
+                </ul>
+
+                <h3>User-Generated Content</h3>
+                <p><strong>Your Data Ownership:</strong></p>
+                <p>You retain all rights to the data you create in the App, including:</p>
+                <ul>
+                    <li>Child profiles (names, birthdates, photos)</li>
+                    <li>Sleep session records and notes</li>
+                    <li>Personal settings and preferences</li>
+                </ul>
+
+                <p><strong>License to Us:</strong></p>
+                <p>By using the App, you grant us a limited license to:</p>
+                <ul>
+                    <li>Store your data locally on your device (we do not access this data)</li>
+                    <li>Process your data to provide App functionality (calculations, charts, insights)</li>
+                    <li>Use anonymized, aggregated usage data to improve the App</li>
+                </ul>
+
+                <p><strong>Important:</strong> All your data remains on your device. We do not access, store, or transmit your child profile data or sleep records to our servers.</p>
+
+                <h3>Third-Party Content</h3>
+                <p>The App may contain:</p>
+                <ul>
+                    <li>Sound recordings licensed from third parties</li>
+                    <li>Developmental data based on the Wonder Weeks research</li>
+                    <li>Icons and graphics from third-party libraries</li>
+                </ul>
+                <p>All third-party content is used under appropriate licenses and remains the property of the respective owners.</p>
+
+                <h3>DMCA Compliance</h3>
+                <p>If you believe any content in the App infringes your copyright, please contact us at <a href="mailto:maksim.bulat.help@gmail.com">maksim.bulat.help@gmail.com</a> with:</p>
+                <ul>
+                    <li>A description of the copyrighted work</li>
+                    <li>A description of where the infringing material is located</li>
+                    <li>Your contact information</li>
+                    <li>A statement of good faith belief</li>
+                    <li>A statement of accuracy under penalty of perjury</li>
+                    <li>Your physical or electronic signature</li>
+                </ul>
+            </section>
+
+            <section id="user-data">
+                <h2>7. User Data and Privacy</h2>
+
+                <h3>Local Data Storage</h3>
+                <div class="notice-box">
+                    <p><strong>Critical Privacy Practice:</strong> All child profile data and sleep records are stored exclusively on your device. We do not transmit, store, or backup your child's information to our servers.</p>
+                </div>
+                <ul>
+                    <li>Data is protected by iOS device encryption</li>
+                    <li>Uninstalling the App permanently deletes all local data</li>
+                </ul>
+
+                <h3>Analytics and Usage Data</h3>
+                <p>We collect limited, anonymized analytics data through Firebase Analytics:</p>
+                <ul>
+                    <li>Sound playback events (which sounds are popular, not linked to your child)</li>
+                    <li>App feature usage (which features are used, for improvement purposes)</li>
+                    <li>Crash reports and error logs (technical debugging information)</li>
+                    <li>Subscription events (purchase analytics, not payment details)</li>
+                </ul>
+
+                <p><strong>No Personal Identifiable Information (PII) is collected in analytics.</strong></p>
+
+                <h3>Complete Privacy Policy</h3>
+                <p>For detailed information about data collection, use, and protection, please read our complete <a href="../../privacy-policy/index.html">Privacy Policy</a>.</p>
+                <p>By using Sleeppy, you consent to the data practices described in our Privacy Policy.</p>
+            </section>
+
+            <section id="children-privacy">
+                <h2>8. Children's Privacy (COPPA Compliance)</h2>
+
+                <h3>Special Protections for Children</h3>
+                <p>Sleeppy is designed specifically for tracking children's information. We comply with the Children's Online Privacy Protection Act (COPPA) and similar international laws.</p>
+
+                <p><strong>Key Principles:</strong></p>
+                <ul>
+                    <li>Parental consent is required before entering any child information</li>
+                    <li>All child data remains on the parent's device (not collected by us)</li>
+                    <li>Child information is never used for marketing or advertising purposes</li>
+                    <li>Parents have full control to review, modify, and delete child data at any time</li>
+                </ul>
+
+                <h3>Parental Rights:</h3>
+                <ul>
+                    <li>Review all information about your child stored in the App</li>
+                    <li>Delete child profiles and sleep data at any time</li>
+                    <li>Export sleep data to CSV format</li>
+                    <li>Revoke consent by deleting the App and all associated data</li>
+                </ul>
+
+                <h3>No Direct Child Interaction:</h3>
+                <ul>
+                    <li>The App is designed for parent/caregiver use only</li>
+                    <li>Children should not directly interact with the App without parental supervision</li>
+                </ul>
+
+                <p>For more information about children's privacy, see Section 13 of our <a href="../../privacy-policy/index.html">Privacy Policy</a>.</p>
+            </section>
+
+            <section id="advertising">
+                <h2>9. Advertising (Free Users)</h2>
+
+                <h3>Ad-Supported Free Version</h3>
+                <p>The free version of Sleeppy is supported by advertisements provided through Google AdMob.</p>
+
+                <p><strong>Ad Frequency Limits:</strong></p>
+                <ul>
+                    <li>Maximum of 5 advertisements per day for free users</li>
+                    <li>Minimum 15-minute interval between ads</li>
+                    <li>Ads do not interrupt active sleep sound playback</li>
+                    <li>Ads are contextually appropriate and family-friendly</li>
+                </ul>
+
+                <p><strong>Ad Types:</strong></p>
+                <ul>
+                    <li>Interstitial ads (full-screen ads between features)</li>
+                    <li>Rewarded ads (optional ads for rewards)</li>
+                    <li>Banner and native ads are not currently used</li>
+                </ul>
+
+                <p><strong>No Advertising for Premium Users:</strong></p>
+                <p>All advertisements are completely removed for active premium subscribers.</p>
+
+                <p><strong>Third-Party Ad Services:</strong></p>
+                <p>Google AdMob may collect anonymous device information for ad delivery and measurement. See Google's privacy policy at <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a> for details.</p>
+
+                <p><strong>Opt-Out of Personalized Ads:</strong></p>
+                <p>You can limit ad tracking through iOS Settings &gt; Privacy &gt; Tracking.</p>
+            </section>
+
+            <section id="disclaimers">
+                <h2>10. Disclaimers and Limitations of Liability</h2>
+
+                <h3>Medical Disclaimer</h3>
+                <div class="warning-box">
+                    <p><strong>SLEEPPY IS NOT A MEDICAL DEVICE AND DOES NOT PROVIDE MEDICAL ADVICE.</strong></p>
+                </div>
+                <ul>
+                    <li>The App is designed for general informational and entertainment purposes only</li>
+                    <li>Sound playback and sleep tracking features are wellness tools, not medical treatments</li>
+                    <li>Growth spurt information is based on general developmental research and may not apply to all children</li>
+                    <li>The App should not be used as a substitute for professional medical advice, diagnosis, or treatment</li>
+                </ul>
+
+                <p><strong>Important Health Warnings:</strong></p>
+                <ul>
+                    <li>Always consult a qualified pediatrician or healthcare provider regarding your child's sleep patterns, health, or development</li>
+                    <li>Persistent sleep problems may indicate underlying medical conditions requiring professional evaluation</li>
+                    <li>Developmental milestones vary significantly among children; do not rely solely on the App's growth calendar</li>
+                    <li>If you have concerns about your child's health or development, seek professional medical advice immediately</li>
+                </ul>
+
+                <p><strong>Sound Safety:</strong></p>
+                <ul>
+                    <li>Always use the App at a safe, moderate volume level</li>
+                    <li>Prolonged exposure to loud sounds can damage hearing, especially in infants and young children</li>
+                    <li>Position devices at a safe distance from your child</li>
+                    <li>We are not responsible for any hearing damage or injury resulting from improper use</li>
+                </ul>
+
+                <h3>Service Availability</h3>
+                <p><strong>"AS IS" AND "AS AVAILABLE" BASIS:</strong></p>
+                <p>Sleeppy is provided on an "as is" and "as available" basis without warranties of any kind, either express or implied, including but not limited to:</p>
+                <ul>
+                    <li>Warranties of merchantability or fitness for a particular purpose</li>
+                    <li>Warranties of non-infringement or title</li>
+                    <li>Warranties regarding accuracy, reliability, or completeness</li>
+                    <li>Warranties that the App will be error-free, secure, or uninterrupted</li>
+                </ul>
+
+                <p><strong>We Do Not Guarantee:</strong></p>
+                <ul>
+                    <li>The App will meet your specific requirements or expectations</li>
+                    <li>The App will be available at all times without interruption or downtime</li>
+                    <li>Any errors or defects will be corrected promptly or at all</li>
+                    <li>The App will be free from viruses, bugs, or harmful components</li>
+                    <li>Results from using the App (sleep improvement, developmental insights, etc.)</li>
+                </ul>
+
+                <h3>Limitation of Liability</h3>
+                <p><strong>TO THE MAXIMUM EXTENT PERMITTED BY LAW:</strong></p>
+                <p>Maksim Bulat, its officers, directors, employees, affiliates, and licensors SHALL NOT BE LIABLE FOR:</p>
+
+                <p><strong>Indirect, Incidental, or Consequential Damages:</strong></p>
+                <ul>
+                    <li>Loss of profits, revenue, data, or business opportunities</li>
+                    <li>Emotional distress or psychological harm</li>
+                    <li>Reliance on App content or recommendations</li>
+                    <li>Service interruptions or downtime</li>
+                    <li>Data loss or corruption</li>
+                    <li>Third-party actions or content</li>
+                </ul>
+
+                <p><strong>Direct Damages Cap:</strong></p>
+                <p>In no event shall our total liability to you for all damages, losses, and causes of action exceed the amount you have paid us in the twelve (12) months prior to the claim, or $50 USD, whichever is greater.</p>
+
+                <p><strong>Exceptions:</strong></p>
+                <p>Some jurisdictions do not allow limitations on implied warranties or exclusion of certain damages. In such jurisdictions, our liability will be limited to the fullest extent permitted by law.</p>
+
+                <h3>Third-Party Services</h3>
+                <p>We integrate third-party services including:</p>
+                <ul>
+                    <li>Apple App Store (payment processing)</li>
+                    <li>Google Firebase (analytics, crash reporting, remote configuration)</li>
+                    <li>Google AdMob (advertising for free users)</li>
+                </ul>
+
+                <p><strong>We Are Not Responsible For:</strong></p>
+                <ul>
+                    <li>Third-party service availability, functionality, or security</li>
+                    <li>Third-party privacy practices or data handling</li>
+                    <li>Errors, bugs, or issues caused by third-party services</li>
+                    <li>Changes or discontinuation of third-party services</li>
+                </ul>
+
+                <h3>User Responsibility</h3>
+                <p><strong>You Are Solely Responsible For:</strong></p>
+                <ul>
+                    <li>Proper and safe use of the App</li>
+                    <li>Monitoring your child's actual sleep and well-being</li>
+                    <li>Decisions made based on App data or recommendations</li>
+                    <li>Maintaining the security of your device</li>
+                    <li>Ensuring your device meets system requirements</li>
+                    <li>Backup of any data you wish to preserve (via CSV export)</li>
+                    <li>Compliance with these Terms and applicable laws</li>
+                </ul>
+            </section>
+
+            <section id="indemnification">
+                <h2>11. Indemnification</h2>
+                <p>You agree to indemnify, defend, and hold harmless Maksim Bulat, its officers, directors, employees, affiliates, agents, licensors, and service providers from and against any and all claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising from:</p>
+                <ul>
+                    <li>Your use or misuse of the App</li>
+                    <li>Your violation of these Terms</li>
+                    <li>Your violation of any law, regulation, or third-party rights</li>
+                    <li>Information or content you submit, post, or transmit through the App</li>
+                    <li>Your negligence or willful misconduct</li>
+                    <li>Unauthorized use of the App under your control</li>
+                    <li>Claims related to your child's health, safety, or well-being in connection with App use</li>
+                </ul>
+                <p>We reserve the right to assume exclusive defense and control of any matter subject to indemnification by you, and you agree to cooperate with our defense of such claims.</p>
+            </section>
+
+            <section id="modifications">
+                <h2>12. Modifications to the Service and Terms</h2>
+
+                <h3>Changes to the App</h3>
+                <p>We reserve the right to:</p>
+                <ul>
+                    <li>Modify, suspend, or discontinue the App (or any part thereof) at any time with or without notice</li>
+                    <li>Add, remove, or alter features and functionality</li>
+                    <li>Update sound libraries, growth spurt data, or other content</li>
+                    <li>Change system requirements or compatibility</li>
+                    <li>Implement new fees for previously free features (with advance notice to existing users)</li>
+                </ul>
+                <p>We will make reasonable efforts to notify you of significant changes, but we are not obligated to do so.</p>
+
+                <p><strong>No Liability for Changes:</strong></p>
+                <p>We shall not be liable to you or any third party for any modification, suspension, or discontinuation of the App.</p>
+
+                <h3>Changes to Terms</h3>
+                <p>We may revise these Terms at any time by:</p>
+                <ul>
+                    <li>Updating this document with a new "Last Updated" date</li>
+                    <li>Posting the revised Terms in the App or on our website</li>
+                    <li>Sending notification through the App (for material changes)</li>
+                </ul>
+
+                <p><strong>Your Continued Use Constitutes Acceptance:</strong></p>
+                <ul>
+                    <li>Continued use of the App after Terms changes constitutes your acceptance of the revised Terms</li>
+                    <li>If you do not agree to the revised Terms, you must stop using the App and uninstall it</li>
+                    <li>Material changes will be effective 30 days after posting (for existing users)</li>
+                </ul>
+
+                <p><strong>Review Regularly:</strong></p>
+                <p>You are responsible for reviewing these Terms periodically. We recommend checking for updates each time you use the App.</p>
+            </section>
+
+            <section id="termination">
+                <h2>13. Termination</h2>
+
+                <h3>Termination by You</h3>
+                <p>You may terminate your use of the App at any time by:</p>
+                <ul>
+                    <li>Uninstalling the App from your device</li>
+                    <li>Canceling your premium subscription (if applicable) through Apple ID Settings</li>
+                    <li>Ceasing all use of the App</li>
+                </ul>
+
+                <p><strong>Effects of Your Termination:</strong></p>
+                <ul>
+                    <li>All local data will be permanently deleted upon uninstallation</li>
+                    <li>Premium access will continue until the end of your paid billing period</li>
+                    <li>No refunds will be provided for unused subscription time (except as required by law)</li>
+                </ul>
+
+                <h3>Termination by Us</h3>
+                <p>We reserve the right to terminate or suspend your access to the App immediately, without prior notice or liability, for any reason, including but not limited to:</p>
+                <ul>
+                    <li>Breach of these Terms</li>
+                    <li>Fraudulent, abusive, or illegal activity</li>
+                    <li>Use of the App in a manner harmful to us or other users</li>
+                    <li>Prolonged inactivity (if we implement account systems in the future)</li>
+                    <li>At our sole discretion for any or no reason</li>
+                </ul>
+
+                <p><strong>Effects of Our Termination:</strong></p>
+                <ul>
+                    <li>Immediate loss of access to the App and all features</li>
+                    <li>Forfeiture of any premium subscription time without refund</li>
+                    <li>Obligation to uninstall the App from your device</li>
+                    <li>Survival of provisions that by their nature should survive (indemnification, limitations of liability, etc.)</li>
+                </ul>
+
+                <h3>Survival of Terms</h3>
+                <p>The following sections survive termination:</p>
+                <ul>
+                    <li>Section 6 (Intellectual Property Rights)</li>
+                    <li>Section 10 (Disclaimers and Limitations of Liability)</li>
+                    <li>Section 11 (Indemnification)</li>
+                    <li>Section 14 (Governing Law and Dispute Resolution)</li>
+                    <li>Any other provisions that by their nature should survive</li>
+                </ul>
+            </section>
+
+            <section id="governing-law">
+                <h2>14. Governing Law and Dispute Resolution</h2>
+
+                <h3>Governing Law</h3>
+                <p>These Terms shall be governed by and construed in accordance with the laws of <strong>Poland</strong>, without regard to its conflict of law principles.</p>
+                <p>The United Nations Convention on Contracts for the International Sale of Goods shall not apply.</p>
+
+                <h3>Jurisdiction</h3>
+                <p>You agree that any legal action or proceeding arising out of or relating to these Terms or the App shall be brought exclusively in the courts located in <strong>Warsaw, Poland</strong>, and you consent to the personal jurisdiction of such courts.</p>
+
+                <h3>Dispute Resolution Process</h3>
+                <p><strong>Step 1: Informal Resolution</strong></p>
+                <p>Before filing any formal claim, you agree to first contact us at <a href="mailto:maksim.bulat.help@gmail.com">maksim.bulat.help@gmail.com</a> to attempt to resolve the dispute informally. We will attempt to resolve the dispute within 30 days.</p>
+
+                <p><strong>Step 2: Arbitration (If Applicable)</strong></p>
+                <p>If we cannot resolve the dispute informally, you agree that any dispute shall be resolved through binding arbitration in accordance with the rules of applicable arbitration body in Poland, except as otherwise provided in these Terms.</p>
+
+                <p><strong>Exceptions to Arbitration:</strong></p>
+                <p>The following may be brought in court:</p>
+                <ul>
+                    <li>Small claims court actions (within jurisdictional limits)</li>
+                    <li>Claims for injunctive or equitable relief</li>
+                    <li>Intellectual property disputes</li>
+                </ul>
+
+                <p><strong>Class Action Waiver:</strong></p>
+                <p>You agree that any proceedings to resolve disputes will be conducted on an individual basis and not as a class, consolidated, or representative action.</p>
+
+                <h3>European Union Users</h3>
+                <p>If you are a consumer residing in the European Union, you may also have the right to use the European Commission's Online Dispute Resolution (ODR) platform at <a href="https://ec.europa.eu/consumers/odr/" target="_blank">https://ec.europa.eu/consumers/odr/</a>.</p>
+
+                <h3>California Users</h3>
+                <p>If you are a California resident, you waive California Civil Code Section 1542, which states: "A general release does not extend to claims that the creditor or releasing party does not know or suspect to exist in his or her favor at the time of executing the release and that, if known by him or her, would have materially affected his or her settlement with the debtor or released party."</p>
+            </section>
+
+            <section id="miscellaneous">
+                <h2>15. Miscellaneous Provisions</h2>
+
+                <h3>Entire Agreement</h3>
+                <p>These Terms, together with our Privacy Policy and any other legal notices published by us in the App, constitute the entire agreement between you and Maksim Bulat regarding your use of Sleeppy and supersede all prior or contemporaneous understandings and agreements, whether written or oral.</p>
+
+                <h3>Severability</h3>
+                <p>If any provision of these Terms is found to be unlawful, void, or unenforceable by a court of competent jurisdiction, that provision shall be deemed severable and shall not affect the validity and enforceability of the remaining provisions.</p>
+
+                <h3>Waiver</h3>
+                <p>Our failure to enforce any right or provision of these Terms shall not constitute a waiver of such right or provision unless acknowledged and agreed to by us in writing.</p>
+                <p>No waiver of any term shall be deemed a further or continuing waiver of such term or any other term.</p>
+
+                <h3>Assignment</h3>
+                <p>You may not assign, transfer, or delegate these Terms or your rights and obligations hereunder without our prior written consent.</p>
+                <p>We may freely assign or transfer these Terms and our rights and obligations hereunder, including in connection with a merger, acquisition, sale of assets, or by operation of law.</p>
+
+                <h3>Force Majeure</h3>
+                <p>We shall not be liable for any failure or delay in performance due to circumstances beyond our reasonable control, including but not limited to:</p>
+                <ul>
+                    <li>Acts of God, natural disasters, or extreme weather</li>
+                    <li>War, terrorism, riots, or civil unrest</li>
+                    <li>Pandemics or public health emergencies</li>
+                    <li>Government actions, regulations, or restrictions</li>
+                    <li>Internet outages, server failures, or telecommunications problems</li>
+                    <li>Acts or omissions of third parties (Apple, Firebase, AdMob, etc.)</li>
+                </ul>
+
+                <h3>Export Controls</h3>
+                <p>You agree to comply with all applicable export and import control laws and regulations. You represent that you are not located in a country subject to a U.S. Government embargo or designated as a "terrorist supporting" country, and you are not on any government list of prohibited or restricted parties.</p>
+
+                <h3>Apple App Store Requirements</h3>
+                <p><strong>Acknowledgment:</strong></p>
+                <p>These Terms are between you and Maksim Bulat only, not with Apple Inc. Apple is not responsible for the App or its content.</p>
+
+                <p><strong>License:</strong></p>
+                <p>The license granted to you is limited to a non-transferable license to use the App on Apple-branded products that you own or control as permitted by the Apple App Store Terms of Service.</p>
+
+                <p><strong>Maintenance and Support:</strong></p>
+                <p>Apple has no obligation to provide maintenance or support services. Any questions, complaints, or claims should be directed to us at <a href="mailto:maksim.bulat.help@gmail.com">maksim.bulat.help@gmail.com</a>.</p>
+
+                <p><strong>Warranty:</strong></p>
+                <p>Apple is not responsible for any warranty claims, whether express or implied. In the event of any failure of the App to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price (if any). To the maximum extent permitted by law, Apple has no other warranty obligation.</p>
+
+                <p><strong>Product Claims:</strong></p>
+                <p>Apple is not responsible for addressing any claims by you or third parties relating to the App, including:</p>
+                <ul>
+                    <li>Product liability claims</li>
+                    <li>Claims that the App fails to conform to legal or regulatory requirements</li>
+                    <li>Claims arising under consumer protection or similar legislation</li>
+                </ul>
+
+                <p><strong>Intellectual Property:</strong></p>
+                <p>Apple is not responsible for investigating, defending, settling, or discharging any third-party claim that the App infringes that third party's intellectual property rights.</p>
+
+                <p><strong>Third-Party Beneficiary:</strong></p>
+                <p>Apple and its subsidiaries are third-party beneficiaries of these Terms. Upon your acceptance of these Terms, Apple will have the right (and will be deemed to have accepted the right) to enforce these Terms against you as a third-party beneficiary.</p>
+
+                <h3>Contact Information</h3>
+                <p>For questions, concerns, or notices regarding these Terms, please contact us at:</p>
+                <p><strong>Email:</strong> <a href="mailto:maksim.bulat.help@gmail.com">maksim.bulat.help@gmail.com</a><br>
+                <strong>Website:</strong> <a href="https://mbulatit.github.io/maksim-bulat-dev" target="_blank">https://mbulatit.github.io/maksim-bulat-dev</a></p>
+
+                <p><strong>Mailing Address:</strong><br>
+                Maksim Bulat<br>
+                Krzyzowki 28C/7<br>
+                Warsaw, Mazovia, 03-193<br>
+                Poland</p>
+            </section>
+
+            <section id="acknowledgment">
+                <h2>16. Acknowledgment</h2>
+                <div class="acknowledgment-box">
+                    <p>BY USING SLEEPPY, YOU ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTOOD, AND AGREE TO BE BOUND BY THESE TERMS OF SERVICE AND OUR PRIVACY POLICY.</p>
+                </div>
+                <p style="text-align: center; margin-top: 1.5rem;">If you do not agree to these Terms, you must immediately discontinue use of the App and uninstall it from your device.</p>
+            </section>
+
+            <hr style="border: none; border-top: 1px solid var(--glass-border); margin: 3rem 0;">
+
+            <p style="text-align: center; color: var(--text-primary);"><strong>Thank you for using Sleeppy. We hope our app helps your baby sleep peacefully.</strong></p>
+
+            <hr style="border: none; border-top: 1px solid var(--glass-border); margin: 3rem 0;">
+
+            <p style="text-align: center; color: var(--text-tertiary); font-style: italic;">These Terms of Service were last reviewed and updated on October 29, 2025.</p>
+        </main>
+    </div>
+
+    <footer class="footer">
+        © 2025 Maksim Bulat - Sleeppy Baby Sleep Agent
+    </footer>
+
+    <script>
+        // Smooth scroll and active link highlighting
+        const tocLinks = document.querySelectorAll('.toc-link');
+        const sections = document.querySelectorAll('section[id]');
+
+        // Handle click events for smooth scrolling
+        tocLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Highlight active section in TOC
+        function highlightActiveSection() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 120) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', highlightActiveSection);
+        highlightActiveSection(); // Initial call
+    </script>
+</body>
+</html>

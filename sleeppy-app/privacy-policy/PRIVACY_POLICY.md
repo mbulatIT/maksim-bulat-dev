@@ -222,8 +222,7 @@ Since Sleeppy does not require user accounts:
 
 ## 7. International Data Transfers
 
-Sleeppy is based in Warsaw, Poland and primarily serves users in worldwide, with primary focus on the European Union, United States,
-  Brazil, and other markets where our supported languages are spoken.
+Sleeppy is based in Warsaw, Poland and primarily serves users worldwide, with primary focus on the European Union, United States, Brazil, and other markets where our supported languages are spoken.
 
 **Data Transfers:**
 - Local data remains on your device and is not transferred internationally
