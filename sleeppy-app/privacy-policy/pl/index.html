@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polityka Prywatności - Sleeppy Baby Sleep Agent</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-dark: #0f172a;
+            --bg-slate-900: #0f172a;
+            --bg-slate-800: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-tertiary: #64748b;
+            --sky-400: #38bdf8;
+            --sky-500: #0ea5e9;
+            --violet-400: #a78bfa;
+            --violet-500: #8b5cf6;
+            --glass-bg: rgba(255, 255, 255, 0.04);
+            --glass-border: rgba(255, 255, 255, 0.06);
+            --accent-gradient: linear-gradient(135deg, var(--sky-400) 0%, var(--violet-400) 100%);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            background: linear-gradient(135deg, var(--bg-slate-900) 0%, var(--bg-slate-800) 50%, var(--bg-dark) 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .header {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--glass-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--sky-400);
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 4rem;
+        }
+
+        /* Table of Contents */
+        .toc {
+            position: sticky;
+            top: 100px;
+            align-self: start;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+        }
+
+        .toc h2 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .toc-list {
+            list-style: none;
+        }
+
+        .toc-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .toc-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: block;
+            padding: 0.4rem 0.6rem;
+            border-radius: 0.5rem;
+            transition: all 0.2s;
+        }
+
+        .toc-link:hover {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--sky-400);
+        }
+
+        .toc-link.active {
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--sky-400);
+        }
+
+        /* Main content */
+        .content {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 1.5rem;
+            padding: 3rem;
+            max-width: 900px;
+        }
+
+        .content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .last-updated {
+            color: var(--text-tertiary);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .content h2 {
+            font-size: 1.8rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            scroll-margin-top: 100px;
+        }
+
+        .content h3 {
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 0.8rem;
+            color: var(--sky-400);
+        }
+
+        .content p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .content ul, .content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .content strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .content a {
+            color: var(--sky-400);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .content a:hover {
+            color: var(--violet-400);
+        }
+
+        .notice-box {
+            background: rgba(56, 189, 248, 0.1);
+            border-left: 3px solid var(--sky-400);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+
+        .notice-box p {
+            color: var(--text-primary);
+        }
+
+        .summary-box {
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            padding: 2rem;
+            border-radius: 1rem;
+            margin: 2rem 0;
+        }
+
+        .summary-box h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .checkmark-list {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .checkmark-list li::before {
+            content: "✅ ";
+            margin-right: 0.5rem;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-tertiary);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .toc {
+                position: relative;
+                top: 0;
+                max-height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1rem;
+            }
+
+            .content {
+                padding: 2rem 1.5rem;
+            }
+
+            .content h1 {
+                font-size: 2rem;
+            }
+
+            .content h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Scrollbar styling */
+        .toc::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .toc::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .toc::-webkit-scrollbar-thumb {
+            background: var(--glass-border);
+            border-radius: 3px;
+        }
+
+        .toc::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="../../index.html" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back to Home
+            </a>
+            <div class="logo">Sleeppy Polityka Prywatności</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="toc">
+            <h2>Spis treści</h2>
+            <ul class="toc-list">
+                <li><a href="#wprowadzenie" class="toc-link">Wprowadzenie</a></li>
+                <li><a href="#dzieci-prywatnosc" class="toc-link">Prywatność dzieci</a></li>
+                <li><a href="#informacje-zbieramy" class="toc-link">Informacje, które gromadzimy</a></li>
+                <li><a href="#wykorzystanie-info" class="toc-link">Jak wykorzystujemy informacje</a></li>
+                <li><a href="#udostepnianie-info" class="toc-link">Jak udostępniamy informacje</a></li>
+                <li><a href="#przechowywanie-danych" class="toc-link">Przechowywanie i bezpieczeństwo</a></li>
+                <li><a href="#twoje-prawa" class="toc-link">Twoje prawa i wybory</a></li>
+                <li><a href="#retencja-danych" class="toc-link">Retencja danych</a></li>
+                <li><a href="#miedzynarodowe" class="toc-link">Transfery międzynarodowe</a></li>
+                <li><a href="#prawa-prawne" class="toc-link">Prawa prawne (RODO/CCPA)</a></li>
+                <li><a href="#strony-trzecie" class="toc-link">Linki stron trzecich</a></li>
+                <li><a href="#zmiany" class="toc-link">Zmiany polityki</a></li>
+                <li><a href="#kontakt" class="toc-link">Skontaktuj się z nami</a></li>
+                <li><a href="#jurysdykcje" class="toc-link">Szczegóły jurysdykcji</a></li>
+                <li><a href="#coppa" class="toc-link">Zgodność z COPPA</a></li>
+                <li><a href="#podsumowanie" class="toc-link">Podsumowanie prywatności</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <h1>Polityka Prywatności dla Sleeppy</h1>
+            <p class="last-updated"><strong>Ostatnia aktualizacja:</strong> 29 października 2025 r.</p>
+
+            <section id="wprowadzenie">
+                <h2>Wprowadzenie</h2>
+                <p>Sleeppy („my", „nas" lub „nasz") to mobilna aplikacja wspomagająca sen dziecka, zaprojektowana aby pomóc rodzicom i opiekunom uspokajać swoje dzieci przy pomocy wyselekcjonowanych dźwięków, śledzić wzorce snu i monitorować kamienie milowe rozwoju. Niniejsza Polityka Prywatności wyjaśnia, w jaki sposób gromadzimy, wykorzystujemy, udostępniamy i chronimy informacje podczas korzystania z naszej aplikacji iOS.</p>
+                <p>Korzystając z Sleeppy, zgadzasz się na gromadzenie i wykorzystywanie informacji zgodnie z niniejszą polityką.</p>
+            </section>
+
+            <section id="dzieci-prywatnosc">
+                <h2>Ważne Powiadomienie Dotyczące Prywatności Dzieci</h2>
+                <div class="notice-box">
+                    <p><strong>Sleeppy zostało zaprojektowane specjalnie do śledzenia snu i rozwoju dzieci.</strong> Bardzo poważnie traktujemy prywatność dzieci i przestrzegamy Ustawy o Ochronie Prywatności Dzieci w Internecie (COPPA) oraz innych obowiązujących przepisów dotyczących prywatności dzieci.</p>
+                </div>
+                <ul>
+                    <li><strong>Wymagana zgoda rodziców:</strong> Wszystkie informacje o dzieciach są wprowadzane przez rodziców lub prawnych opiekunów.</li>
+                    <li><strong>Kontrola rodzicielska:</strong> Rodzice zachowują pełną kontrolę nad wszystkimi danymi wprowadzonymi na temat swoich dzieci.</li>
+                    <li><strong>Przechowywanie lokalne:</strong> Informacje o dziecku (w tym imiona, daty urodzenia, płeć i zdjęcia) są przechowywane wyłącznie na Twoim urządzeniu lokalnym i nigdy nie są przesyłane na nasze serwery.</li>
+                    <li><strong>Brak marketingu dla dzieci:</strong> Nie używamy informacji o dzieciach do celów marketingowych lub reklamowych.</li>
+                </ul>
+            </section>
+
+            <section id="informacje-zbieramy">
+                <h2>1. Informacje, które gromadzimy</h2>
+
+                <h3>A. Informacje, które podajesz bezpośrednio</h3>
+
+                <p><strong>Informacje o profilu dziecka</strong> (przechowywane tylko lokalnie):</p>
+                <ul>
+                    <li>Imię dziecka</li>
+                    <li>Data urodzenia</li>
+                    <li>Płeć</li>
+                    <li>Zdjęcie profilowe (opcjonalne)</li>
+                </ul>
+
+                <p><strong>Dane śledzenia snu</strong> (przechowywane tylko lokalnie):</p>
+                <ul>
+                    <li>Godziny rozpoczęcia i zakończenia sesji snu</li>
+                    <li>Czas trwania snu</li>
+                    <li>Typ sesji (drzemka lub sen nocny)</li>
+                    <li>Dźwięki odtwarzane podczas sesji snu</li>
+                    <li>Opcjonalne notatki dotyczące sesji snu</li>
+                </ul>
+
+                <p><strong>Preferencje użytkownika</strong> (przechowywane tylko lokalnie):</p>
+                <ul>
+                    <li>Ustawienia motywu aplikacji (tryb jasny/ciemny)</li>
+                    <li>Preferencje dotyczące wibracji dotykowych</li>
+                    <li>Ustawienia automatycznego śledzenia snu</li>
+                    <li>Preferencje powiadomień</li>
+                    <li>Ulubione dźwięki</li>
+                    <li>Konfiguracje widżetów</li>
+                </ul>
+
+                <p><strong>Komunikacja z pomocą techniczną:</strong></p>
+                <ul>
+                    <li>Jeśli skontaktujesz się z naszym zespołem pomocy technicznej, możemy zebrać Twój adres e-mail i treść Twojej komunikacji</li>
+                </ul>
+
+                <h3>B. Informacje zbierane automatycznie</h3>
+
+                <p><strong>Analityka użytkowania</strong> (zbierane przez Firebase Analytics):</p>
+                <ul>
+                    <li>Zdarzenia odtwarzania dźwięku i czas trwania</li>
+                    <li>Interakcje z dostosowaniem timera</li>
+                    <li>Zdarzenia sesji śledzenia snu</li>
+                    <li>Korzystanie z funkcji aplikacji (anonimowo)</li>
+                    <li>Zdarzenia subskrypcji (zakupy, odnowienia)</li>
+                    <li>Interakcje z prośbami o recenzję</li>
+                    <li>Interakcje reklamowe (dla użytkowników bezpłatnych)</li>
+                </ul>
+
+                <p><strong>Informacje techniczne</strong> (zbierane przez Firebase):</p>
+                <ul>
+                    <li>Model urządzenia i specyfikacje</li>
+                    <li>Wersja systemu operacyjnego</li>
+                    <li>Wersja aplikacji</li>
+                    <li>Raporty awarii i dzienniki błędów (przez Firebase Crashlytics)</li>
+                    <li>Anonimowe identyfikatory urządzeń (nie IDFA/identyfikator reklamowy)</li>
+                </ul>
+
+                <p><strong>Dane konfiguracji zdalnej:</strong></p>
+                <ul>
+                    <li>Status flag funkcji (przez Firebase Remote Config)</li>
+                    <li>Wartości konfiguracyjne zachowania aplikacji</li>
+                </ul>
+
+                <h3>C. Informacje, których NIE gromadzimy</h3>
+
+                <p>Wyraźnie NIE gromadzimy:</p>
+                <ul>
+                    <li>Danych o lokalizacji lub informacji GPS</li>
+                    <li>Dostępu do kamery lub mikrofonu do nagrywania</li>
+                    <li>List kontaktów lub adresów e-mail (z wyjątkiem wsparcia)</li>
+                    <li>Dokumentacji medycznej lub danych HealthKit</li>
+                    <li>Historii przeglądarki lub aktywności w sieci</li>
+                    <li>IDFA urządzenia lub identyfikatorów reklamowych do śledzenia</li>
+                    <li>Danych biometrycznych</li>
+                    <li>Informacji o kartach płatniczych (obsługiwane wyłącznie przez Apple)</li>
+                    <li>Monitorowania aktywności w czasie rzeczywistym poza aplikacją</li>
+                </ul>
+            </section>
+
+            <section id="wykorzystanie-info">
+                <h2>2. Jak wykorzystujemy Twoje informacje</h2>
+                <p>Wykorzystujemy zebrane informacje do następujących celów:</p>
+
+                <h3>Funkcjonalność aplikacji:</h3>
+                <ul>
+                    <li>Zapewnienie odtwarzania dźwięków snu i funkcjonalności timera</li>
+                    <li>Śledzenie i wyświetlanie sesji snu i wzorców</li>
+                    <li>Wyświetlanie informacji o skokach wzrostu w oparciu o wiek dziecka</li>
+                    <li>Generowanie spersonalizowanych zaleceń</li>
+                    <li>Obsługa wielu profili dzieci</li>
+                    <li>Synchronizacja ustawień między widżetami a elementami sterującymi ekranu blokady</li>
+                    <li>Wysyłanie lokalnych powiadomień o timerach i przypomnieniach</li>
+                </ul>
+
+                <h3>Ulepszanie usług:</h3>
+                <ul>
+                    <li>Analiza użytkowania aplikacji w celu ulepszenia funkcji i doświadczenia użytkownika</li>
+                    <li>Identyfikacja i naprawa awarii oraz problemów technicznych</li>
+                    <li>Testowanie nowych funkcji poprzez konfigurację zdalną</li>
+                    <li>Optymalizacja wydajności aplikacji</li>
+                </ul>
+
+                <h3>Obsługa klienta:</h3>
+                <ul>
+                    <li>Odpowiedzi na prośby o wsparcie i zapytania</li>
+                    <li>Rozwiązywanie problemów technicznych</li>
+                    <li>Dostarczanie aktualizacji o aplikacji</li>
+                </ul>
+
+                <h3>Kwestie prawne i bezpieczeństwo:</h3>
+                <ul>
+                    <li>Przestrzeganie zobowiązań prawnych</li>
+                    <li>Ochrona bezpieczeństwa i integralności naszych usług</li>
+                    <li>Zapobieganie oszustwom i nadużyciom</li>
+                </ul>
+            </section>
+
+            <section id="udostepnianie-info">
+                <h2>3. Jak udostępniamy Twoje informacje</h2>
+                <p><strong>Nie sprzedajemy żadnych danych osobowych stronom trzecim.</strong></p>
+                <p>Udostępniamy informacje tylko w następujących ograniczonych okolicznościach:</p>
+
+                <h3>Zewnętrzni dostawcy usług:</h3>
+
+                <p><strong>Firebase (Google LLC):</strong></p>
+                <ul>
+                    <li><strong>Firebase Analytics:</strong> Otrzymuje anonimowe zdarzenia użytkowania do analityki</li>
+                    <li><strong>Firebase Crashlytics:</strong> Otrzymuje raporty awarii i dzienniki błędów</li>
+                    <li><strong>Firebase Remote Config:</strong> Zapewnia konfigurację funkcji (nie są wysyłane dane użytkownika)</li>
+                    <li><strong>Cel:</strong> Monitorowanie wydajności aplikacji, wykrywanie awarii, zarządzanie funkcjami</li>
+                    <li><strong>Typ danych:</strong> Tylko anonimowe dane techniczne i dane o użytkowaniu</li>
+                    <li><strong>Polityka prywatności:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></li>
+                </ul>
+
+                <p><strong>Apple Inc.:</strong></p>
+                <ul>
+                    <li><strong>StoreKit 2:</strong> Przetwarza wszystkie płatności subskrypcyjne i zakupy</li>
+                    <li><strong>App Store Connect:</strong> Zarządza statusem subskrypcji</li>
+                    <li><strong>Cel:</strong> Przetwarzanie płatności i zarządzanie subskrypcjami</li>
+                    <li><strong>Typ danych:</strong> Informacje o transakcjach (nigdy nie mamy dostępu do szczegółów Twojej karty płatniczej)</li>
+                    <li><strong>Polityka prywatności:</strong> <a href="https://www.apple.com/legal/privacy/" target="_blank">https://www.apple.com/legal/privacy/</a></li>
+                </ul>
+
+                <p><strong>Google AdMob (tylko dla użytkowników bezpłatnych):</strong></p>
+                <ul>
+                    <li><strong>Cel:</strong> Wyświetlanie reklam użytkownikom bez subskrypcji premium</li>
+                    <li><strong>Typ danych:</strong> Anonimowe metryki wydajności reklam</li>
+                    <li><strong>Limity częstotliwości:</strong> Maksymalnie 5 reklam dziennie, 15-minutowe odstępy między reklamami</li>
+                    <li><strong>Kontrola:</strong> Reklamy są wyłączone dla subskrybentów premium</li>
+                    <li><strong>Polityka prywatności:</strong> <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
+                </ul>
+
+                <h3>Wymogi prawne:</h3>
+                <p>Możemy ujawnić informacje, jeśli jest to wymagane przez prawo, proces prawny, nakaz sądowy lub wniosek rządowy.</p>
+
+                <h3>Przekazanie działalności:</h3>
+                <p>W przypadku fuzji, przejęcia lub sprzedaży aktywów, informacje o użytkownikach mogą zostać przekazane podmiotowi przejmującemu.</p>
+            </section>
+
+            <section id="przechowywanie-danych">
+                <h2>4. Przechowywanie i bezpieczeństwo danych</h2>
+
+                <h3>Przechowywanie lokalne:</h3>
+                <ul>
+                    <li><strong>Wszystkie dane generowane przez użytkownika są przechowywane wyłącznie na Twoim urządzeniu</strong> przy użyciu frameworka SwiftData od Apple</li>
+                    <li>Profile dzieci, sesje snu i preferencje nigdy nie opuszczają Twojego urządzenia</li>
+                    <li>Brak kopii zapasowej w chmurze lub synchronizacji z serwerem</li>
+                    <li>Dane są chronione szyfrowaniem urządzenia iOS</li>
+                    <li>Odinstalowanie aplikacji trwale usuwa wszystkie dane lokalne</li>
+                </ul>
+
+                <h3>Dane sieciowe:</h3>
+                <ul>
+                    <li>Zdarzenia analityczne są bezpiecznie przesyłane przez HTTPS/TLS na serwery Firebase</li>
+                    <li>Dane konfiguracji zdalnej są bezpiecznie pobierane z Firebase</li>
+                    <li>Żadne dane umożliwiające identyfikację osoby nie są przesyłane w zdarzeniach analitycznych</li>
+                </ul>
+
+                <h3>Udostępnianie grupy aplikacji:</h3>
+                <ul>
+                    <li>Dane są udostępniane między główną aplikacją, widżetami a elementami sterującymi ekranu blokady przy użyciu grup aplikacji iOS (<code>group.com.sleeppygroup.app</code>)</li>
+                    <li>To udostępnianie jest bezpieczne i ograniczone tylko do urządzenia</li>
+                    <li>Brak zewnętrznego dostępu do udostępnionych danych</li>
+                </ul>
+
+                <h3>Środki bezpieczeństwa:</h3>
+                <ul>
+                    <li>Cała komunikacja sieciowa wykorzystuje szyfrowanie HTTPS/TLS</li>
+                    <li>Połączenia Firebase są uwierzytelniane i szyfrowane</li>
+                    <li>Szyfrowanie urządzenia iOS chroni wszystkie dane lokalne</li>
+                    <li>Regularne aktualizacje bezpieczeństwa i poprawki</li>
+                </ul>
+
+                <p><strong>Ważne:</strong> Chociaż wdrażamy standardowe środki bezpieczeństwa branżowego, żadna metoda przechowywania elektronicznego nie jest w 100% bezpieczna. Nie możemy zagwarantować absolutnego bezpieczeństwa Twoich danych.</p>
+            </section>
+
+            <section id="twoje-prawa">
+                <h2>5. Twoje prawa i wybory</h2>
+
+                <h3>Dostęp do danych i kontrola:</h3>
+                <ul>
+                    <li><strong>Przeglądanie danych:</strong> Dostęp do wszystkich sesji snu i profili dzieci w aplikacji</li>
+                    <li><strong>Usuwanie danych:</strong> Ręczne usuwanie poszczególnych sesji snu, profili dzieci lub resetowanie wszystkich danych</li>
+                    <li><strong>Eksport danych:</strong> Eksport danych o śnie do formatu CSV dla Twoich zapisów lub dostawców opieki zdrowotnej</li>
+                </ul>
+
+                <h3>Kontrola powiadomień:</h3>
+                <ul>
+                    <li><strong>Włącz/Wyłącz:</strong> Kontroluj każdy typ powiadomienia niezależnie</li>
+                    <li><strong>Ciche godziny:</strong> Ustaw niestandardowe ciche godziny dla powiadomień</li>
+                    <li><strong>Rezygnacja:</strong> Całkowicie wyłącz powiadomienia przez Ustawienia iOS</li>
+                </ul>
+
+                <h3>Wybory reklamowe (użytkownicy bezpłatni):</h3>
+                <ul>
+                    <li><strong>Przejdź na Premium:</strong> Usuń wszystkie reklamy, subskrybując</li>
+                    <li><strong>Ogranicz śledzenie reklam:</strong> Kontroluj preferencje reklam przez Ustawienia iOS &gt; Prywatność &gt; Śledzenie</li>
+                    <li><strong>Częstotliwość reklam:</strong> Automatycznie ograniczona do maksymalnie 5 reklam dziennie</li>
+                </ul>
+
+                <h3>Zarządzanie subskrypcją:</h3>
+                <ul>
+                    <li><strong>Anuluj w każdej chwili:</strong> Zarządzaj subskrypcjami lub je anuluj przez Ustawienia iOS &gt; [Twoje imię] &gt; Subskrypcje</li>
+                    <li><strong>Przywróć zakupy:</strong> Przywróć funkcje premium na różnych urządzeniach przy użyciu swojego Apple ID</li>
+                    <li><strong>Zwroty:</strong> Poproś o zwrot pieniędzy przez App Store Apple (zgodnie z polityką zwrotów Apple)</li>
+                </ul>
+
+                <h3>Rezygnacja z analityki:</h3>
+                <ul>
+                    <li>Zbieranie analityki jest zanonimizowane i nie może być indywidualnie wyłączone</li>
+                    <li>Możesz ograniczyć analitykę, ograniczając dostęp sieciowy do aplikacji (chociaż wpływa to na funkcjonalność)</li>
+                </ul>
+            </section>
+
+            <section id="retencja-danych">
+                <h2>6. Przechowywanie i usuwanie danych</h2>
+
+                <h3>Dane kontrolowane przez użytkownika:</h3>
+                <ul>
+                    <li><strong>Sesje snu:</strong> Przechowywane na czas nieokreślony, dopóki ich ręcznie nie usuniesz</li>
+                    <li><strong>Profile dzieci:</strong> Przechowywane na czas nieokreślony, dopóki ich ręcznie nie usuniesz</li>
+                    <li><strong>Ustawienia:</strong> Utrzymują się po uruchomieniach aplikacji do momentu zresetowania</li>
+                </ul>
+
+                <h3>Dane zarządzane automatycznie:</h3>
+                <ul>
+                    <li><strong>Zdarzenia analityczne:</strong> Przechowywane przez Firebase przez około 14 miesięcy</li>
+                    <li><strong>Raporty awarii:</strong> Przechowywane przez Crashlytics przez 90 dni</li>
+                    <li><strong>Konfiguracja zdalna:</strong> Wartości konfiguracyjne przechowywane lokalnie przez 12 godzin</li>
+                </ul>
+
+                <h3>Usunięcie konta:</h3>
+                <p>Ponieważ Sleeppy nie wymaga kont użytkowników:</p>
+                <ul>
+                    <li>Po prostu usuń aplikację, aby trwale usunąć wszystkie dane lokalne</li>
+                    <li>Dane analityczne w Firebase będą przechowywane zgodnie z polityką przechowywania Firebase</li>
+                    <li>Wniosek o usunięcie konta nie jest konieczny</li>
+                </ul>
+
+                <h3>Przenośność danych:</h3>
+                <ul>
+                    <li>Eksportuj dane śledzenia snu do formatu CSV w dowolnym momencie</li>
+                    <li>Pliki CSV zawierają wszystkie szczegóły sesji snu dla Twoich zapisów</li>
+                </ul>
+            </section>
+
+            <section id="miedzynarodowe">
+                <h2>7. Międzynarodowe przekazywanie danych</h2>
+                <p>Sleeppy ma siedzibę w Warszawie, Polska i obsługuje głównie użytkowników na całym świecie, z głównym naciskiem na Unię Europejską, Stany Zjednoczone, Brazylię i inne rynki, gdzie używane są nasze obsługiwane języki.</p>
+
+                <h3>Przekazywanie danych:</h3>
+                <ul>
+                    <li>Dane lokalne pozostają na Twoim urządzeniu i nie są przekazywane międzynarodowo</li>
+                    <li>Dane analityczne i awaryjne są przetwarzane przez Google Firebase, który może przechowywać dane na serwerach znajdujących się w Stanach Zjednoczonych i innych krajach</li>
+                    <li>Kraje te mogą mieć przepisy dotyczące ochrony danych różniące się od przepisów w Twoim kraju zamieszkania</li>
+                    <li>Firebase przestrzega mających zastosowanie ram przekazywania danych (EU-US Data Privacy Framework, standardowe klauzule umowne)</li>
+                </ul>
+
+                <h3>Zgodność z RODO (użytkownicy z UE):</h3>
+                <p>Jeśli znajdujesz się w Europejskim Obszarze Gospodarczym (EOG), Wielkiej Brytanii lub Szwajcarii:</p>
+                <ul>
+                    <li>Jesteśmy administratorem Twoich danych osobowych</li>
+                    <li>Podstawa prawna przetwarzania: Prawnie uzasadniony interes (funkcjonalność aplikacji) i zgoda (powiadomienia)</li>
+                    <li>Masz dodatkowe prawa zgodnie z RODO (patrz Sekcja 8)</li>
+                </ul>
+            </section>
+
+            <section id="prawa-prawne">
+                <h2>8. Twoje prawa prawne (RODO, CCPA i inne przepisy)</h2>
+                <p>W zależności od Twojej lokalizacji możesz mieć następujące prawa:</p>
+
+                <h3>Prawa RODO (EOG, Wielka Brytania, Szwajcaria):</h3>
+                <ul>
+                    <li><strong>Prawo dostępu:</strong> Żądanie kopii Twoich danych osobowych</li>
+                    <li><strong>Prawo do sprostowania:</strong> Poprawianie niedokładnych informacji</li>
+                    <li><strong>Prawo do usunięcia:</strong> Żądanie usunięcia Twoich danych</li>
+                    <li><strong>Prawo do ograniczenia przetwarzania:</strong> Ograniczenie sposobu, w jaki wykorzystujemy Twoje dane</li>
+                    <li><strong>Prawo do przenoszenia danych:</strong> Otrzymanie Twoich danych w uporządkowanym formacie (eksport CSV)</li>
+                    <li><strong>Prawo do sprzeciwu:</strong> Sprzeciw wobec przetwarzania na podstawie prawnie uzasadnionych interesów</li>
+                    <li><strong>Prawo do wycofania zgody:</strong> Wycofanie zgody na powiadomienia w dowolnym momencie</li>
+                </ul>
+
+                <h3>Prawa CCPA (mieszkańcy Kalifornii):</h3>
+                <ul>
+                    <li><strong>Prawo do wiedzy:</strong> Wiedza, jakie dane osobowe są gromadzone</li>
+                    <li><strong>Prawo do usunięcia:</strong> Żądanie usunięcia danych osobowych</li>
+                    <li><strong>Prawo do rezygnacji:</strong> Nie sprzedajemy danych osobowych</li>
+                    <li><strong>Prawo do niedyskryminacji:</strong> Równa usługa niezależnie od korzystania z praw do prywatności</li>
+                </ul>
+
+                <h3>Jak skorzystać ze swoich praw:</h3>
+                <ul>
+                    <li><strong>Dane lokalne:</strong> Użyj funkcji usuwania i eksportu w aplikacji</li>
+                    <li><strong>Dane analityczne:</strong> Skontaktuj się z nami pod adresem maksim.bulat.help@gmail.com z Twoim żądaniem</li>
+                    <li><strong>Weryfikacja:</strong> Możemy wymagać weryfikacji Twojej tożsamości</li>
+                    <li><strong>Czas odpowiedzi:</strong> Odpowiemy w ciągu 30 dni (45 dni dla CCPA)</li>
+                </ul>
+            </section>
+
+            <section id="strony-trzecie">
+                <h2>9. Linki i usługi stron trzecich</h2>
+                <p>Sleeppy może zawierać linki do stron internetowych, usług lub treści stron trzecich:</p>
+                <ul>
+                    <li>Nie ponosimy odpowiedzialności za praktyki prywatności stron trzecich</li>
+                    <li>Zachęcamy do zapoznania się z ich politykami prywatności</li>
+                    <li>Niniejsza Polityka Prywatności dotyczy tylko Sleeppy</li>
+                </ul>
+            </section>
+
+            <section id="zmiany">
+                <h2>10. Zmiany w niniejszej Polityce Prywatności</h2>
+                <p>Możemy od czasu do czasu aktualizować niniejszą Politykę Prywatności, aby odzwierciedlić:</p>
+                <ul>
+                    <li>Zmiany w naszych praktykach</li>
+                    <li>Wymogi prawne lub regulacyjne</li>
+                    <li>Nowe funkcje lub usługi</li>
+                </ul>
+
+                <h3>Powiadomienie o zmianach:</h3>
+                <ul>
+                    <li>Istotne zmiany zostaną powiadomione przez powiadomienie w aplikacji</li>
+                    <li>Kontynuowanie korzystania z aplikacji po zmianach oznacza akceptację</li>
+                    <li>Data ostatniej aktualizacji będzie zawsze wyświetlana u góry tej polityki</li>
+                </ul>
+
+                <p>Zachęcamy do okresowego przeglądania niniejszej Polityki Prywatności.</p>
+            </section>
+
+            <section id="kontakt">
+                <h2>11. Skontaktuj się z nami</h2>
+                <p>Jeśli masz pytania, obawy lub wnioski dotyczące niniejszej Polityki Prywatności lub naszych praktyk związanych z danymi, skontaktuj się z nami:</p>
+
+                <p><strong>E-mail:</strong> <a href="mailto:maksim.bulat.help@gmail.com">maksim.bulat.help@gmail.com</a><br>
+                <strong>Strona internetowa:</strong> <a href="https://mbulatit.github.io/maksim-bulat-dev" target="_blank">https://mbulatit.github.io/maksim-bulat-dev</a></p>
+
+                <p><strong>Adres pocztowy:</strong><br>
+                Maksim Bulat<br>
+                Krzyżówki 28C/7<br>
+                Warszawa, Mazowieckie, 03-193<br>
+                Polska</p>
+            </section>
+
+            <section id="jurysdykcje">
+                <h2>12. Szczegółowe ujawnienia według jurysdykcji</h2>
+
+                <h3>Mieszkańcy Kalifornii (CCPA):</h3>
+
+                <p><strong>Kategorie zgromadzonych danych osobowych (ostatnie 12 miesięcy):</strong></p>
+                <ul>
+                    <li>Identyfikatory: Anonimowe identyfikatory urządzeń (nie IDFA)</li>
+                    <li>Aktywność internetowa: Zdarzenia użytkowania aplikacji, odtwarzanie dźwięku</li>
+                    <li>Informacje handlowe: Transakcje subskrypcyjne (przez Apple)</li>
+                </ul>
+
+                <p><strong>Kategorie źródeł:</strong></p>
+                <ul>
+                    <li>Bezpośrednio od Ciebie (profile dzieci, dane o śnie)</li>
+                    <li>Automatycznie z urządzenia (analityka użytkowania)</li>
+                </ul>
+
+                <p><strong>Cel biznesowy/handlowy:</strong></p>
+                <ul>
+                    <li>Zapewnienie funkcjonalności aplikacji</li>
+                    <li>Analityka i ulepszenia</li>
+                    <li>Obsługa klienta</li>
+                </ul>
+
+                <p><strong>Kategorie stron trzecich, którym udostępniamy:</strong></p>
+                <ul>
+                    <li>Dostawcy usług (Firebase, Apple)</li>
+                    <li>Sieci reklamowe (Google AdMob dla użytkowników bezpłatnych)</li>
+                </ul>
+
+                <p><strong>Sprzedaż danych osobowych:</strong><br>
+                NIE sprzedajemy danych osobowych.</p>
+
+                <h3>Europejski Obszar Gospodarczy (RODO):</h3>
+
+                <p><strong>Administrator danych:</strong><br>
+                Maksim Bulat. NIP PL5833448632</p>
+
+                <p><strong>Podstawa prawna przetwarzania:</strong></p>
+                <ul>
+                    <li><strong>Prawnie uzasadniony interes:</strong> Funkcjonalność aplikacji i ulepszenia</li>
+                    <li><strong>Zgoda:</strong> Powiadomienia push, analityka (zanonimizowana)</li>
+                    <li><strong>Konieczność umowna:</strong> Przetwarzanie subskrypcji (przez Apple)</li>
+                </ul>
+
+                <p><strong>Przekazywanie danych:</strong><br>
+                Stosujemy standardowe klauzule umowne zatwierdzone przez Komisję Europejską w przypadku przekazywania danych do krajów poza EOG.</p>
+
+                <p><strong>Organ nadzorczy:</strong><br>
+                Masz prawo złożyć skargę do lokalnego organu ochrony danych.</p>
+
+                <h3>Mieszkańcy Brazylii (LGPD):</h3>
+                <p>Przestrzegamy Lei Geral de Proteção de Dados (LGPD). Brazylijscy użytkownicy mają prawa podobne do RODO, w tym dostęp, korektę, usunięcie i przenośność.</p>
+            </section>
+
+            <section id="coppa">
+                <h2>13. Oświadczenie o prywatności dzieci (zgodność z COPPA)</h2>
+                <p>Ponieważ Sleeppy zostało zaprojektowane do śledzenia informacji o dzieciach, przedstawiamy to dodatkowe oświadczenie o prywatności dzieci:</p>
+
+                <h3>Informacje zbierane o dzieciach:</h3>
+                <ul>
+                    <li>Imiona, daty urodzenia, płeć i zdjęcia są zbierane przez rodziców/opiekunów</li>
+                    <li>Wszystkie informacje o dziecku są przechowywane lokalnie na urządzeniu rodzica</li>
+                    <li>Nie gromadzimy świadomie informacji bezpośrednio od dzieci poniżej 13 roku życia</li>
+                    <li>Rodzice mogą w każdej chwili przeglądać, usuwać i eksportować wszystkie informacje o dziecku</li>
+                </ul>
+
+                <h3>Zgoda rodziców:</h3>
+                <ul>
+                    <li>Wprowadzając informacje o dziecku, potwierdzasz, że jesteś rodzicem/prawnym opiekunem</li>
+                    <li>Wyrażasz zgodę na gromadzenie i przechowywanie tych informacji na Twoim urządzeniu</li>
+                    <li>Możesz wycofać tę zgodę, usuwając profil dziecka w dowolnym momencie</li>
+                </ul>
+
+                <h3>Dostęp stron trzecich:</h3>
+                <ul>
+                    <li>Informacje o dziecku NIGDY nie są przesyłane na nasze serwery ani stronom trzecim</li>
+                    <li>Zdarzenia analityczne nie zawierają imion dzieci, zdjęć ani innych danych osobowych</li>
+                    <li>Firebase może otrzymywać przedziały wiekowe dzieci do optymalizacji funkcji (zanonimizowane)</li>
+                </ul>
+
+                <h3>Kontrola rodzicielska:</h3>
+                <ul>
+                    <li>Przeglądaj wszystkie informacje o dziecku w sekcji profilu aplikacji</li>
+                    <li>Usuń profile dzieci pojedynczo lub wszystkie naraz</li>
+                    <li>Eksportuj dane o śnie dla dostawców opieki zdrowotnej</li>
+                    <li>Kontroluj wszystkie funkcje i ustawienia aplikacji</li>
+                </ul>
+
+                <p><strong>Kontakt w sprawach rodzicielskich:</strong><br>
+                Rodzice z pytaniami dotyczącymi danych dzieci powinni skontaktować się z nami pod adresem <a href="mailto:maksim.bulat.help@gmail.com">maksim.bulat.help@gmail.com</a>.</p>
+            </section>
+
+            <section id="podsumowanie">
+                <div class="summary-box">
+                    <h2>Podsumowanie: Twoja prywatność w skrócie</h2>
+                    <ul class="checkmark-list">
+                        <li><strong>Dane dziecka przechowywane tylko lokalnie</strong> - Nigdy nie wysyłane na serwery</li>
+                        <li><strong>Brak synchronizacji w chmurze</strong> - Wszystkie dane pozostają na Twoim urządzeniu</li>
+                        <li><strong>Brak śledzenia lokalizacji</strong> - Nie gromadzimy danych GPS</li>
+                        <li><strong>Brak sprzedaży danych</strong> - Nigdy nie sprzedajemy danych osobowych</li>
+                        <li><strong>Anonimowa analityka</strong> - Dane użytkowania są zanonimizowane</li>
+                        <li><strong>Kontrola rodzicielska</strong> - Usuwaj i eksportuj dane w dowolnym momencie</li>
+                        <li><strong>Przejrzystość</strong> - Jasne ujawnienie wszystkich praktyk dotyczących danych</li>
+                        <li><strong>Bezpieczeństwo</strong> - Szyfrowanie i bezpieczeństwo na poziomie branżowym</li>
+                    </ul>
+                </div>
+
+                <p style="text-align: center; margin-top: 2rem; color: var(--text-primary);"><strong>Dziękujemy za zaufanie do Sleeppy w pomocy Twojemu dziecku w spokojnym śnie.</strong> Twoja prywatność i prywatność Twojego dziecka są naszymi najwyższymi priorytetami.</p>
+            </section>
+
+            <hr style="border: none; border-top: 1px solid var(--glass-border); margin: 3rem 0;">
+
+            <p style="text-align: center; color: var(--text-tertiary); font-style: italic;">Niniejsza Polityka Prywatności została ostatnio przejrzana i zaktualizowana 29 października 2025 r.</p>
+        </main>
+    </div>
+
+    <footer class="footer">
+        © 2025 Maksim Bulat - Sleeppy Baby Sleep Agent
+    </footer>
+
+    <script>
+        // Smooth scroll and active link highlighting
+        const tocLinks = document.querySelectorAll('.toc-link');
+        const sections = document.querySelectorAll('section[id]');
+
+        // Handle click events for smooth scrolling
+        tocLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Highlight active section in TOC
+        function highlightActiveSection() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 120) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', highlightActiveSection);
+        highlightActiveSection(); // Initial call
+    </script>
+</body>
+</html>
