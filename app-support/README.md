@@ -26,7 +26,7 @@ A dedicated support page for your App Store customers to contact you with questi
 ## Files Included
 
 ```
-AppSupport/
+app-support/
 ├── index.html          # Main support page
 ├── styles.css          # Styling with glassmorphism effects
 ├── script.js           # Form handling and email integration
@@ -84,7 +84,7 @@ The support page is linked from your main landing page in three places:
 
 Direct URL (after deployment):
 ```
-https://yourdomain.com/AppSupport/
+https://yourdomain.com/app-support/
 ```
 
 ## Form Fields
@@ -197,12 +197,12 @@ See **[EMAIL_SETUP.md](EMAIL_SETUP.md)** for more troubleshooting.
 
 ## Deployment
 
-The AppSupport page deploys with your main site. No special configuration needed.
+The app-support page deploys with your main site. No special configuration needed.
 
 After deployment, access at:
-- GitHub Pages: `https://username.github.io/repo/AppSupport/`
-- Netlify: `https://yoursite.netlify.app/AppSupport/`
-- Custom domain: `https://yourdomain.com/AppSupport/`
+- GitHub Pages: `https://username.github.io/repo/app-support/`
+- Netlify: `https://yoursite.netlify.app/app-support/`
+- Custom domain: `https://yourdomain.com/app-support/`
 
 ## Analytics (Optional)
 
