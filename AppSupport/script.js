@@ -1,19 +1,7 @@
 // Set current year in footer
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// ========================================
-// EMAIL CONFIGURATION
-// ========================================
-// Choose your preferred email service:
-// 1. FORMSPREE (Recommended - Easiest)
-// 2. EMAILJS (Alternative)
-// 3. NETLIFY_FORMS (If deploying on Netlify)
-
 const EMAIL_SERVICE = 'EMAILJS'; // Change to 'EMAILJS' or 'NETLIFY_FORMS' if needed
-
-// FORMSPREE Configuration
-// Sign up at https://formspree.io and get your form endpoint
-const FORMSPREE_ENDPOINT = 'YOUR_FORM_ID_HERE'; // Replace with your actual form ID (e.g., 'xyzabc123')
 
 // EMAILJS Configuration (if using EmailJS)
 // Sign up at https://www.emailjs.com/
