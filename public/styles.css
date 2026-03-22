@@ -572,6 +572,10 @@ textarea {
     margin: 0.8rem 0 0;
 }
 
+.maker-card__action {
+    margin-top: 1.25rem;
+}
+
 .resource-strip {
     display: grid;
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);

@@ -8,7 +8,7 @@ const copy = {
         "nav.resources": "Resources",
         "nav.experience": "Experience",
         "nav.support": "Support",
-        "nav.maker": "Maker",
+        "nav.maker": "Developer page",
         "hero.eyebrow": "Designed for calmer days and softer nights",
         "hero.titleLead": "Track the full parenting rhythm with",
         "hero.titleAccent": "Sleeppy.",
@@ -93,6 +93,7 @@ const copy = {
         "maker.title": "Built by Maksim Bulat.",
         "maker.description":
             "Sleeppy is designed and developed by Maksim Bulat, an iOS engineer focused on product quality, maintainable architecture, and polished mobile experiences.",
+        "maker.action": "Open developer page",
         "maker.roleLabel": "Role",
         "maker.roleValue": "iOS Developer and App Architect",
         "maker.focusLabel": "Focus",
