@@ -219,7 +219,7 @@ Para perguntas, notificações ou reclamações sobre estes Termos, entre em con
 
 Maksim Bulat  
 E-mail: maksim.bulat.help@gmail.com  
-Site: https://mbulatit.github.io/maksim-bulat-dev
+Site: https://sleeppyai.web.app
 
 ## 19. A versão em inglês prevalece
 

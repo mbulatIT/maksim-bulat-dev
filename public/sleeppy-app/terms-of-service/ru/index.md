@@ -219,7 +219,7 @@ Sleeppy не является медицинским устройством и �
 
 Maksim Bulat  
 Электронная почта: maksim.bulat.help@gmail.com  
-Сайт: https://mbulatit.github.io/maksim-bulat-dev
+Сайт: https://sleeppyai.web.app
 
 ## 19. Преобладает английская версия
 

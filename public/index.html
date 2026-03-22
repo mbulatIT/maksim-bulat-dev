@@ -3,308 +3,350 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maksim Bulat - iOS Developer</title>
+    <title>Sleeppy | Baby Sleep Tracker, Routines, Sounds, and Insights</title>
+    <meta
+        name="description"
+        content="Sleeppy helps parents track sleep, feeding, diapers, soothing sounds, daily routines, and family-sharing updates with calm design and clearer insights."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-   <script>
-       (function(){
-           emailjs.init("nyBg3sqiD6iwo7VV1");
-       })();
-   </script>
 </head>
 <body>
-    <!-- Decorative blobs -->
-    <div class="decorative-blobs">
-        <svg class="blob blob-1" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <linearGradient id="gradient-1" x1="0" x2="1">
-                    <stop offset="0%" stop-color="#0ea5e9" />
-                    <stop offset="100%" stop-color="#8b5cf6" />
-                </linearGradient>
-            </defs>
-            <g opacity="0.6">
-                <path d="M300 50C360 50 460 90 520 150C580 210 590 320 520 380C450 440 360 480 300 520C240 480 150 440 80 380C10 320 20 210 80 150C140 90 240 50 300 50Z" fill="url(#gradient-1)" />
-            </g>
-        </svg>
+    <div class="page-glow page-glow-left" aria-hidden="true"></div>
+    <div class="page-glow page-glow-right" aria-hidden="true"></div>
 
-        <svg class="blob blob-2" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <linearGradient id="gradient-2" x1="0" x2="1">
-                    <stop offset="0%" stop-color="#06b6d4" />
-                    <stop offset="100%" stop-color="#7c3aed" />
-                </linearGradient>
-            </defs>
-            <path d="M300 30C360 30 470 80 530 160C590 240 560 350 500 410C440 470 340 510 280 540C220 510 120 470 60 410C0 350 30 240 90 160C150 80 240 30 300 30Z" fill="url(#gradient-2)" />
-        </svg>
-    </div>
-
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="header-left">
-                    <div class="logo-box">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" class="logo-icon">
-                            <path d="M3 12a9 9 0 1018 0 9 9 0 10-18 0z" stroke="url(#logo-gradient)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
-                            <defs>
-                                <linearGradient id="logo-gradient" x1="0" x2="1">
-                                    <stop offset="0%" stop-color="#60a5fa" />
-                                    <stop offset="100%" stop-color="#a78bfa" />
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </div>
-                    <div class="header-info">
-                        <div class="name">Maksim Bulat</div>
-                        <div class="title">iOS Developer • App Architect</div>
-                    </div>
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a href="#top" class="brand" aria-label="Sleeppy home">
+                <img src="assets/images/sleeppy-app-icon.png" alt="" class="brand__icon">
+                <div class="brand__copy">
+                    <span class="brand__name">Sleeppy</span>
+                    <span class="brand__tag" data-i18n="brand.tag">Baby sleep, routines, and support</span>
                 </div>
+            </a>
 
-                <nav class="nav">
-                    <a href="#projects" class="nav-link">Apps</a>
-                    <a href="#skills" class="nav-link">Skills</a>
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                </nav>
+            <nav class="site-nav" id="siteNav" aria-label="Primary">
+                <a href="#features" class="site-nav__link" data-i18n="nav.features">Features</a>
+                <a href="#resources" class="site-nav__link" data-i18n="nav.resources">Resources</a>
+                <a href="#experience" class="site-nav__link" data-i18n="nav.experience">Experience</a>
+                <a href="#support" class="site-nav__link" data-i18n="nav.support">Support</a>
+                <a href="#maker" class="site-nav__link" data-i18n="nav.maker">Maker</a>
+            </nav>
 
-                <button class="mobile-menu-toggle" id="mobileMenuToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+            <button
+                type="button"
+                class="menu-toggle"
+                id="menuToggle"
+                aria-expanded="false"
+                aria-controls="siteNav"
+                aria-label="Open navigation"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
-    <!-- Main content -->
-    <main class="main">
-        <div class="container">
-            <!-- Hero section -->
-            <section class="hero">
-                <div class="hero-text fade-in-left">
-                    <p class="greeting">Hello — I'm</p>
-                    <h1 class="hero-title">
-                        Maksim Bulat
-                        <span class="gradient-text">iOS Developer</span>
+    <main id="top">
+        <section class="hero section">
+            <div class="container hero__grid">
+                <div class="hero__content reveal">
+                    <p class="eyebrow" data-i18n="hero.eyebrow">Designed for calmer days and softer nights</p>
+                    <h1 class="hero__title">
+                        <span data-i18n="hero.titleLead">Track the full parenting rhythm with</span>
+                        <span class="hero__title-accent" data-i18n="hero.titleAccent">Sleeppy.</span>
                     </h1>
-
-                    <p class="hero-description">
-                        I'm the developer behind the apps you use. With over 7 years of experience, I focus on building elegant, reliable iOS applications with exceptional performance and delightful user experiences. Quality and user satisfaction are at the heart of everything I create.
+                    <p class="hero__description" data-i18n="hero.description">
+                        Log sleep, feeding, diapers, growth moments, soothing sounds, and daily routines in one place, then keep the whole family in sync with shared updates. Sleeppy turns scattered notes into a calmer flow and clearer insights.
                     </p>
 
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn-primary">
-                            <span>📱</span> View My Apps
+                    <div class="hero__actions">
+                        <a
+                            href="https://apps.apple.com/app/id6754172965"
+                            class="app-store-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Download Sleeppy on the App Store"
+                        >
+                            <img
+                                src="assets/images/app-store-badge.svg"
+                                alt="Download on the App Store"
+                                class="app-store-badge"
+                            >
                         </a>
-                        <a href="#about" class="btn-secondary">
-                            Learn more
-                        </a>
+                        <a href="#resources" class="button button--secondary" data-i18n="hero.secondaryAction">Browse support and legal pages</a>
                     </div>
 
-                    <div class="stats-grid">
-                        <div class="stat">
-                            <div class="stat-label">Experience</div>
-                            <div class="stat-value">7+ years</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-label">Platforms</div>
-                            <div class="stat-value">iOS, iPadOS</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-label">Languages</div>
-                            <div class="stat-value">Swift, Objective-C</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-label">Apps Published</div>
-                            <div class="stat-value">Multiple</div>
-                        </div>
-                    </div>
+                    <ul class="hero__highlights" aria-label="Highlights">
+                        <li class="hero__pill" data-i18n="hero.highlightOne">Sleep, feeding, and diaper logging</li>
+                        <li class="hero__pill" data-i18n="hero.highlightTwo">Family sharing and shared timelines</li>
+                        <li class="hero__pill" data-i18n="hero.highlightThree">iPhone, iPad, and Apple Watch</li>
+                    </ul>
                 </div>
 
-                <div class="hero-card fade-in-scale">
-                    <div class="glass-card profile-card">
-                        <div class="profile-header">
-                            <div class="profile-avatar">MB</div>
-                            <div class="profile-info">
-                                <div class="profile-name">Maksim Bulat</div>
-                                <div class="profile-title">Senior iOS Developer • Swift & SwiftUI</div>
+                <div class="hero__visual reveal">
+                    <div class="showcase">
+                        <div class="showcase__panel showcase__panel--main">
+                            <div class="showcase__header">
+                                <div class="showcase__app">
+                                    <img src="assets/images/sleeppy-app-icon.png" alt="" class="showcase__app-icon">
+                                    <div>
+                                        <p class="showcase__label">Sleeppy</p>
+                                        <p class="showcase__muted" data-i18n="showcase.status">Tonight's routine snapshot</p>
+                                    </div>
+                                </div>
+                                <div class="showcase__signal" data-i18n="showcase.mode">Calm mode</div>
+                            </div>
+
+                            <div class="showcase__hero-card">
+                                <p class="showcase__small" data-i18n="showcase.heroLabel">Last sleep</p>
+                                <p class="showcase__value">1h 42m</p>
+                                <p class="showcase__muted" data-i18n="showcase.heroMeta">Saved automatically in today's timeline</p>
+                            </div>
+
+                            <div class="showcase__metrics">
+                                <div class="metric-card">
+                                    <p class="metric-card__label" data-i18n="showcase.metricOneLabel">Next step</p>
+                                    <p class="metric-card__value" data-i18n="showcase.metricOneValue">Nap window in 35 min</p>
+                                </div>
+                                <div class="metric-card">
+                                    <p class="metric-card__label" data-i18n="showcase.metricTwoLabel">Family sync</p>
+                                    <p class="metric-card__value" data-i18n="showcase.metricTwoValue">Shared timeline updates everyone</p>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="profile-description">
-                            <p>Specialized in modern Apple frameworks (SwiftUI, SwiftData, Combine) and building maintainable codebases with clean architecture patterns.</p>
+                        <div class="showcase__panel showcase__panel--side">
+                            <p class="showcase__small" data-i18n="showcase.sideTitle">What stays in flow</p>
+                            <ul class="mini-list">
+                                <li class="mini-list__item">
+                                    <span class="mini-list__dot mini-list__dot--sleep"></span>
+                                    <span data-i18n="showcase.sideItemOne">Sleep sessions and nap patterns</span>
+                                </li>
+                                <li class="mini-list__item">
+                                    <span class="mini-list__dot mini-list__dot--feed"></span>
+                                    <span data-i18n="showcase.sideItemTwo">Feeding, diapers, and quick logs</span>
+                                </li>
+                                <li class="mini-list__item">
+                                    <span class="mini-list__dot mini-list__dot--sound"></span>
+                                    <span data-i18n="showcase.sideItemThree">Shared updates, sounds, and bedtime cues</span>
+                                </li>
+                            </ul>
                         </div>
 
-                        <div class="profile-links">
-                            <a href="#" class="profile-link">GitHub</a>
-                            <a href="https://apps.apple.com/app/id6754172965" class="profile-link" target="_blank" rel="noopener noreferrer">App Store</a>
-                            <a href="app-support/index.html" class="profile-link">Support</a>
+                        <div class="showcase__floating-card">
+                            <p class="showcase__small" data-i18n="showcase.floatingLabel">Available on</p>
+                            <p class="showcase__floating-value" data-i18n="showcase.floatingValue">iPhone, iPad, Apple Watch</p>
                         </div>
-                    </div>
-
-                    <div class="featured-badge">
-                        <div class="badge-label">Featured</div>
-                        <div class="badge-text">Top App Store charts</div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Projects section -->
-            <section id="projects" class="projects-section">
-                <h2 class="section-title">My Apps</h2>
-                <p class="section-description">Apps I've developed and published on the App Store. Each one is built with attention to detail, performance optimization, and user experience.</p>
+        <section class="section section--compact">
+            <div class="container">
+                <div class="proof-grid reveal">
+                    <article class="proof-card">
+                        <p class="proof-card__eyebrow" data-i18n="proof.oneLabel">All-in-one flow</p>
+                        <p class="proof-card__text" data-i18n="proof.oneText">Track the moments parents repeat all day without bouncing between tools.</p>
+                    </article>
+                    <article class="proof-card">
+                        <p class="proof-card__eyebrow" data-i18n="proof.twoLabel">Family sharing</p>
+                        <p class="proof-card__text" data-i18n="proof.twoText">Keep parents and caregivers aligned with the same routine history instead of fragmented updates.</p>
+                    </article>
+                    <article class="proof-card">
+                        <p class="proof-card__eyebrow" data-i18n="proof.threeLabel">Actionable insights</p>
+                        <p class="proof-card__text" data-i18n="proof.threeText">History, summaries, and patterns help parents understand what is changing.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-                <div class="projects-grid">
-                    <div class="project-card fade-in-up" style="animation-delay: 0s">
-                        <div class="project-header">
-                            <div class="project-info">
-                                <div class="project-title">Sleeppy • Baby Sleep Agent</div>
-                                <div class="project-tagline">Baby sleep tracking, soothing sounds, and growth insights in one app</div>
-                            </div>
-                            <div class="project-icon">S</div>
-                        </div>
-                        <p class="project-description">
-                            Help parents build calmer routines with smart sleep logs, personalized analytics, and premium white-noise soundscapes.
+        <section class="section section--compact" id="resources">
+            <div class="container">
+                <div class="resource-strip reveal">
+                    <div class="resource-strip__copy">
+                        <p class="section-heading__eyebrow" data-i18n="resources.eyebrow">Quick access</p>
+                        <h2 class="resource-strip__title" data-i18n="resources.title">Reach every public Sleeppy page from one place.</h2>
+                    </div>
+                    <div class="resource-links" aria-label="Public pages">
+                        <a href="#maker" class="resource-link" data-i18n="resources.linkDeveloper">Developer page</a>
+                        <a href="app-support/index.html" class="resource-link" data-i18n="resources.linkSupport">App support</a>
+                        <a href="sleeppy-app/privacy-policy/index.html" class="resource-link" data-i18n="resources.linkPrivacy">Privacy policy</a>
+                        <a href="sleeppy-app/terms-of-service/index.html" class="resource-link" data-i18n="resources.linkTerms">Terms of service</a>
+                        <a href="sleeppy-app/eula/index.html" class="resource-link" data-i18n="resources.linkEula">EULA</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="features">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="section-heading__eyebrow" data-i18n="features.eyebrow">Core product experience</p>
+                    <h2 class="section-heading__title" data-i18n="features.title">Track routines, share them with family, and stay in one calm flow.</h2>
+                    <p class="section-heading__description" data-i18n="features.description">
+                        Sleeppy brings daily tracking, family sharing, summaries, insights, and trust resources into one focused place built for real parenting routines.
+                    </p>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card reveal">
+                        <p class="feature-card__index">01</p>
+                        <h3 class="feature-card__title" data-i18n="features.cardOneTitle">Track the essentials fast</h3>
+                        <p class="feature-card__description" data-i18n="features.cardOneText">
+                            Capture sleep, feeding, diapers, and other daily actions with less friction and a clearer home flow.
                         </p>
-                        <div class="project-meta">
-                            <div class="project-meta-item">
-                                <div class="project-meta-label">Platforms</div>
-                                <div class="project-meta-value">iPhone, iPad, Apple Watch</div>
-                            </div>
-                            <div class="project-meta-item">
-                                <div class="project-meta-label">Category</div>
-                                <div class="project-meta-value">Health &amp; Fitness</div>
-                            </div>
-                            <div class="project-meta-item">
-                                <div class="project-meta-label">Availability</div>
-                                <div class="project-meta-value">Free + In-App Purchases</div>
-                            </div>
-                            <div class="project-meta-item">
-                                <div class="project-meta-label">OS Support</div>
-                                <div class="project-meta-value">iOS 18+, watchOS 10+</div>
-                            </div>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">SwiftUI</span>
-                            <span class="tech-tag">Combine</span>
-                            <span class="tech-tag">AVFoundation</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://apps.apple.com/app/id6754172965" class="project-btn project-btn-badge" target="_blank" rel="noopener noreferrer" aria-label="Download Sleeppy on the App Store">
-                                <img src="assets/images/app-store-badge.svg" alt="Download on the App Store" class="app-store-badge">
-                            </a>
-                            <a href="sleeppy-app/privacy-policy/index.html" class="project-btn">Privacy Policy</a>
-                        </div>
-                    </div>
+                    </article>
+                    <article class="feature-card reveal">
+                        <p class="feature-card__index">02</p>
+                        <h3 class="feature-card__title" data-i18n="features.cardTwoTitle">Share the routine with family</h3>
+                        <p class="feature-card__description" data-i18n="features.cardTwoText">
+                            Shared timelines help parents and caregivers see the same updates, recent actions, and next steps without extra check-ins.
+                        </p>
+                    </article>
+                    <article class="feature-card reveal">
+                        <p class="feature-card__index">03</p>
+                        <h3 class="feature-card__title" data-i18n="features.cardThreeTitle">Switch from logs to insights</h3>
+                        <p class="feature-card__description" data-i18n="features.cardThreeText">
+                            Move from raw entries to summaries, trend reading, and assistant-guided context without losing the daily detail.
+                        </p>
+                    </article>
+                    <article class="feature-card reveal">
+                        <p class="feature-card__index">04</p>
+                        <h3 class="feature-card__title" data-i18n="features.cardFourTitle">Keep support close</h3>
+                        <p class="feature-card__description" data-i18n="features.cardFourText">
+                            Support, privacy policy, terms, and EULA are available from the same landing surface for easier trust and maintenance.
+                        </p>
+                    </article>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Skills section -->
-            <section id="skills" class="skills-section">
-                <h3 class="section-title">Core expertise</h3>
-                <div class="skills-grid">
-                    <div class="skill-card">Swift & SwiftUI</div>
-                    <div class="skill-card">Architecture (MVVM, Clean)</div>
-                    <div class="skill-card">Combine / Async</div>
-                    <div class="skill-card">SwiftData / CoreData</div>
-                    <div class="skill-card">UI/UX & Prototyping</div>
-                    <div class="skill-card">Performance & Profiling</div>
-                    <div class="skill-card">App Store Deployment</div>
-                    <div class="skill-card">Unit & UI Testing</div>
-                </div>
-            </section>
-
-            <!-- About section -->
-            <section id="about" class="about-section">
-                <div class="about-main">
-                    <h4 class="about-title">About me</h4>
-                    <p class="about-text">
-                        I'm an iOS developer with over 7 years of experience building consumer and enterprise mobile apps. I enjoy working on complex problems — from audio playback and low-latency interactions to syncing large datasets and designing resilient offline-first flows. I advocate for clear APIs, automated tests and pragmatic architecture. When you download one of my apps, you can trust that it's built with quality, security, and your privacy in mind.
+        <section class="section" id="experience">
+            <div class="container experience-grid">
+                <article class="experience-card reveal">
+                    <p class="section-heading__eyebrow" data-i18n="experience.eyebrow">Built for real daily use</p>
+                    <h2 class="section-heading__title" data-i18n="experience.title">The visual language mirrors the app.</h2>
+                    <p class="experience-card__text" data-i18n="experience.description">
+                        The site mirrors Sleeppy's calm product feel while surfacing core product value earlier, including shared family coordination and direct access to support and legal resources.
                     </p>
-
-                    <div class="about-details">
-                        <div class="detail">
-                            <div class="detail-label">Role</div>
-                            <div class="detail-value">Senior iOS Developer</div>
-                        </div>
-                        <div class="detail">
-                            <div class="detail-label">Experience</div>
-                            <div class="detail-value">7+ years</div>
-                        </div>
-                        <div class="detail">
-                            <div class="detail-label">Location</div>
-                            <div class="detail-value">Warsaw, Poland</div>
-                        </div>
-                        <div class="detail">
-                            <div class="detail-label">Focus</div>
-                            <div class="detail-value">Quality & UX</div>
-                        </div>
+                    <div class="experience-tags">
+                        <span class="experience-tag" data-i18n="experience.tagOne">Family coordination</span>
+                        <span class="experience-tag" data-i18n="experience.tagTwo">Soft gradients</span>
+                        <span class="experience-tag" data-i18n="experience.tagThree">Direct support access</span>
                     </div>
+                </article>
+
+                <article class="platform-card reveal">
+                    <p class="platform-card__label" data-i18n="experience.platformLabel">Platforms</p>
+                    <ul class="platform-list">
+                        <li class="platform-list__item">
+                            <span data-i18n="experience.platformOneTitle">iPhone and iPad</span>
+                            <span data-i18n="experience.platformOneText">Daily logging, summaries, and support resources</span>
+                        </li>
+                        <li class="platform-list__item">
+                            <span data-i18n="experience.platformTwoTitle">Apple Watch</span>
+                            <span data-i18n="experience.platformTwoText">Fast access for active routines and quick context</span>
+                        </li>
+                        <li class="platform-list__item">
+                            <span data-i18n="experience.platformThreeTitle">Support pages</span>
+                            <span data-i18n="experience.platformThreeText">Privacy, terms, EULA, and support stay one tap away</span>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="support">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="section-heading__eyebrow" data-i18n="support.eyebrow">Support and trust</p>
+                    <h2 class="section-heading__title" data-i18n="support.title">Everything important is easy to reach.</h2>
                 </div>
 
-                <aside class="contact-sidebar">
-                    <h5 class="sidebar-title">Get in Touch</h5>
-                    <div class="contact-item">Email: <a href="mailto:maksim.bulat.opportunities@gmail.com" class="contact-link">maksim.bulat.opportunities@gmail.com</a></div>
-                    <div class="contact-item">LinkedIn: <a href="https://pl.linkedin.com/in/maksim-bulat-15795a161" class="contact-link">/in/maksim-bulat-15795a161</a></div>
+                <div class="support-grid">
+                    <a href="app-support/index.html" class="support-card reveal">
+                        <p class="support-card__label" data-i18n="support.cardOneLabel">Need help?</p>
+                        <h3 class="support-card__title" data-i18n="support.cardOneTitle">Open app support</h3>
+                        <p class="support-card__text" data-i18n="support.cardOneText">Questions, feedback, and user support live here.</p>
+                    </a>
+                    <a href="sleeppy-app/privacy-policy/index.html" class="support-card reveal">
+                        <p class="support-card__label" data-i18n="support.cardTwoLabel">Privacy</p>
+                        <h3 class="support-card__title" data-i18n="support.cardTwoTitle">Read the privacy policy</h3>
+                        <p class="support-card__text" data-i18n="support.cardTwoText">See how Sleeppy handles data and user privacy.</p>
+                    </a>
+                    <a href="sleeppy-app/terms-of-service/index.html" class="support-card reveal">
+                        <p class="support-card__label" data-i18n="support.cardThreeLabel">Terms</p>
+                        <h3 class="support-card__title" data-i18n="support.cardThreeTitle">Review the terms of service</h3>
+                        <p class="support-card__text" data-i18n="support.cardThreeText">Usage terms are part of the landing flow now.</p>
+                    </a>
+                    <a href="sleeppy-app/eula/index.html" class="support-card reveal">
+                        <p class="support-card__label" data-i18n="support.cardFourLabel">License</p>
+                        <h3 class="support-card__title" data-i18n="support.cardFourTitle">View the EULA</h3>
+                        <p class="support-card__text" data-i18n="support.cardFourText">The license is still available, but tucked into a product support section.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-                    <div class="sidebar-cta">
-                        <a href="app-support/index.html" class="btn-cta">App Support</a>
+        <section class="section" id="maker">
+            <div class="container maker-grid">
+                <article class="maker-card reveal">
+                    <p class="section-heading__eyebrow" data-i18n="maker.eyebrow">About the maker</p>
+                    <h2 class="section-heading__title" data-i18n="maker.title">Built by Maksim Bulat.</h2>
+                    <p class="maker-card__text" data-i18n="maker.description">
+                        Sleeppy is designed and developed by Maksim Bulat, an iOS engineer focused on product quality, maintainable architecture, and polished mobile experiences.
+                    </p>
+                </article>
+
+                <aside class="maker-card maker-card--compact reveal">
+                    <div class="maker-meta">
+                        <div>
+                            <p class="maker-meta__label" data-i18n="maker.roleLabel">Role</p>
+                            <p class="maker-meta__value" data-i18n="maker.roleValue">iOS Developer and App Architect</p>
+                        </div>
+                        <div>
+                            <p class="maker-meta__label" data-i18n="maker.focusLabel">Focus</p>
+                            <p class="maker-meta__value" data-i18n="maker.focusValue">Swift, SwiftUI, quality, and product UX</p>
+                        </div>
+                        <div>
+                            <p class="maker-meta__label" data-i18n="maker.contactLabel">Contact</p>
+                            <a href="mailto:maksim.bulat.opportunities@gmail.com" class="maker-meta__value maker-meta__value--link">maksim.bulat.opportunities@gmail.com</a>
+                        </div>
+                        <div>
+                            <p class="maker-meta__label" data-i18n="maker.linkedinLabel">LinkedIn</p>
+                            <a
+                                href="https://pl.linkedin.com/in/maksim-bulat-15795a161"
+                                class="maker-meta__value maker-meta__value--link"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >/in/maksim-bulat-15795a161</a>
+                        </div>
                     </div>
                 </aside>
-            </section>
-
-            <!-- Contact section -->
-            <section id="contact" class="contact-section">
-                <div class="contact-content">
-                    <div class="contact-text">
-                        <h4 class="contact-title">Get in Touch</h4>
-                        <p class="contact-description">
-                            Have questions about one of my apps? Need support or want to provide feedback? I'd love to hear from you. Your input helps me create better experiences for all users.
-                        </p>
-
-                        <div class="contact-buttons">
-                            <a href="app-support/index.html" class="btn-contact">App Support Form</a>
-                            <a href="mailto:maksim.bulat.opportunities@gmail.com" class="btn-contact-secondary">Email me directly</a>
-                        </div>
-                    </div>
-
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label class="form-label">Your name</label>
-                            <input type="text" name="name" class="form-input" placeholder="John Smith" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Email</label>
-                            <input type="email" name="email" class="form-input" placeholder="your@email.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Message</label>
-                            <textarea name="message" class="form-textarea" placeholder="Questions, feedback, or support inquiries..." required></textarea>
-                        </div>
-
-                        <!-- Success message -->
-                        <div id="successMessage" style="display: none; padding: 1rem; background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 0.5rem; margin-bottom: 1rem;">
-                            <p style="color: #22c55e; margin: 0;">Thank you for your message! I'll get back to you soon.</p>
-                        </div>
-
-                        <!-- Error message -->
-                        <div id="errorMessage" style="display: none; padding: 1rem; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 0.5rem; margin-bottom: 1rem;">
-                            <p id="errorText" style="color: #ef4444; margin: 0;"></p>
-                        </div>
-
-                        <button type="submit" class="btn-submit" id="submitBtn">
-                            <span id="btnText">Send message</span>
-                            <span id="btnLoader" style="display: none;">Sending...</span>
-                        </button>
-                    </form>
-                </div>
-            </section>
-
-            <footer class="footer">
-                © <span id="year"></span> Maksim Bulat — iOS developer
-            </footer>
-        </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="container site-footer__inner">
+            <div>
+                <p class="site-footer__brand">Sleeppy</p>
+                <div class="site-footer__links" aria-label="Footer links">
+                    <a href="#maker" class="site-footer__link" data-i18n="resources.linkDeveloper">Developer page</a>
+                    <a href="app-support/index.html" class="site-footer__link" data-i18n="resources.linkSupport">App support</a>
+                    <a href="sleeppy-app/privacy-policy/index.html" class="site-footer__link" data-i18n="resources.linkPrivacy">Privacy policy</a>
+                    <a href="sleeppy-app/terms-of-service/index.html" class="site-footer__link" data-i18n="resources.linkTerms">Terms of service</a>
+                    <a href="sleeppy-app/eula/index.html" class="site-footer__link" data-i18n="resources.linkEula">EULA</a>
+                </div>
+            </div>
+            <p class="site-footer__copy">© <span id="year"></span> Maksim Bulat</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

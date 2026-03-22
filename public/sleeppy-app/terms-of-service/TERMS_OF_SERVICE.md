@@ -219,7 +219,7 @@ For questions, notices, or complaints about these Terms, contact:
 
 Maksim Bulat  
 Email: maksim.bulat.help@gmail.com  
-Website: https://mbulatit.github.io/maksim-bulat-dev
+Website: https://sleeppyai.web.app
 
 ## 19. English Version Controls
 

@@ -217,7 +217,7 @@ Jeśli masz pytania lub żądania dotyczące prywatności, skontaktuj się z:
 
 Maksim Bulat  
 E-mail: maksim.bulat.help@gmail.com  
-Strona internetowa: https://mbulatit.github.io/maksim-bulat-dev
+Strona internetowa: https://sleeppyai.web.app
 
 ## 14. Wiążąca jest wersja angielska
 

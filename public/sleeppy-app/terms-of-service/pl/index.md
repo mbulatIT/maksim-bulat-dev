@@ -219,7 +219,7 @@ W przypadku pytań, zawiadomień lub skarg dotyczących niniejszych Warunków sk
 
 Maksim Bulat  
 E-mail: maksim.bulat.help@gmail.com  
-Strona internetowa: https://mbulatit.github.io/maksim-bulat-dev
+Strona internetowa: https://sleeppyai.web.app
 
 ## 19. Wiążąca jest wersja angielska
 

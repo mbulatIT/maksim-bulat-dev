@@ -92,7 +92,7 @@ Las preguntas sobre este EULA pueden enviarse a:
 
 Maksim Bulat  
 Correo electrónico: maksim.bulat.help@gmail.com  
-Sitio web: https://mbulatit.github.io/maksim-bulat-dev
+Sitio web: https://sleeppyai.web.app
 
 ## 13. Prevalece la versión en inglés
 

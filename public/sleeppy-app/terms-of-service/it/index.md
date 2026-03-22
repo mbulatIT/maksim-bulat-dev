@@ -219,7 +219,7 @@ Per domande, comunicazioni o reclami relativi ai presenti Termini, contatta:
 
 Maksim Bulat  
 Email: maksim.bulat.help@gmail.com  
-Sito web: https://mbulatit.github.io/maksim-bulat-dev
+Sito web: https://sleeppyai.web.app
 
 ## 19. Fa fede la versione inglese
 

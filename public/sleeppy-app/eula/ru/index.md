@@ -92,7 +92,7 @@ NIP: PL5833448632
 
 Maksim Bulat  
 Электронная почта: maksim.bulat.help@gmail.com  
-Сайт: https://mbulatit.github.io/maksim-bulat-dev
+Сайт: https://sleeppyai.web.app
 
 ## 13. Преобладает английская версия
 

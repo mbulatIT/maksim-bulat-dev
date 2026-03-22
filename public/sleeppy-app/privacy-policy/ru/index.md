@@ -217,7 +217,7 @@ Sleeppy управляется из Польши. Наши поставщики 
 
 Maksim Bulat  
 Электронная почта: maksim.bulat.help@gmail.com  
-Сайт: https://mbulatit.github.io/maksim-bulat-dev
+Сайт: https://sleeppyai.web.app
 
 ## 14. Преобладает английская версия
 

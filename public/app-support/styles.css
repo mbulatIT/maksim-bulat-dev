@@ -152,6 +152,43 @@ body {
     line-height: 1.6;
 }
 
+.resource-nav,
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.resource-nav {
+    justify-content: center;
+    margin: 0 0 3rem;
+}
+
+.resource-nav__link,
+.footer-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: 0.7rem 0.95rem;
+    border-radius: 999px;
+    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: transform 0.3s, border-color 0.3s, background 0.3s, color 0.3s;
+}
+
+.resource-nav__link:hover,
+.footer-links a:hover,
+.resource-nav__link:focus-visible,
+.footer-links a:focus-visible {
+    transform: translateY(-2px);
+    border-color: rgba(125, 211, 252, 0.3);
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text-primary);
+}
+
 /* Quick Help Section */
 .quick-help {
     margin-bottom: 3rem;
@@ -444,6 +481,8 @@ body {
 .footer {
     margin-top: 3rem;
     padding: 2rem 0;
+    display: grid;
+    gap: 1rem;
     text-align: center;
     font-size: 0.875rem;
     color: var(--text-tertiary);
@@ -469,6 +508,12 @@ body {
 
     .form-container {
         padding: 1.5rem;
+    }
+
+    .resource-nav,
+    .footer-links {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }
 
